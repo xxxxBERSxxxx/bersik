@@ -1,0 +1,290 @@
+*{
+box-sizing: border-box;
+    margin: 0 auto;
+}
+
+
+body{
+    background-color:black;
+ 
+}
+      /* header*/
+header{
+   
+}
+#head{
+    
+  width: 13%;
+  height: 4%;
+    position: fixed;
+    top: 1.5%;
+    right: 1%;
+    z-index: 8;
+    background-color:  #28282e;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   transition:  all 0.5s;
+   border-radius: 10px; 
+}
+#head:hover{
+    color: red;
+    cursor: pointer;
+  border: 2px solid red;
+}
+#head span{
+    font-size: 1.4em;
+     text-shadow: 1px 1px 1px black; 
+}
+#head_menu{
+    width: 30%;
+    height: 70%;
+    position: fixed;
+    background-color: black;
+    z-index: 3;
+    top:0;
+   border: 2px solid red;
+   transition: all 0.8s; 
+    
+   -webkit-box-shadow: 0px 0px 24px 12px rgba(0,  0,  0, 1);
+-moz-box-shadow: 0px 0px 24px 12px rgba(0,  0,  0, 1);
+box-shadow: 0px 0px 24px 12px rgba(0,  0,  0, 1);
+}
+
+.head_menu_no{
+  right: -100%;  
+}
+.head_menu_yes{
+  right: 0%;  
+}
+
+
+#head_menu ul{
+    color: white;
+    font-size: 2.1em;
+    list-style: none;
+   text-align: center;
+    padding: 0;
+    margin-top: 30%;
+    
+}
+#head_menu li{
+   width: 100%;
+   height: 60px;
+    line-height: 60px;
+   transition:  all 0.5s;
+}
+#head_menu li:hover{
+   background-color:  #28282e;
+  color: red;
+   cursor: pointer;
+}
+
+#head1{
+ width: 3%;
+ height: 0.3%; 
+ margin: 0;
+ background-color: white;
+  position: fixed;
+    top: 2%;
+    right: 1%; 
+    display: none;
+}
+#head2{
+ width: 3%;
+ height: 0.3%; 
+ margin: 0;
+ background-color: white;
+  position: fixed;
+top: 3.5%;
+right: 1%;  
+display: none;
+ 
+}
+#head3{
+ width: 3%;
+ height: 0.3%; 
+ margin: 0;
+ background-color: white;
+  position: fixed;
+    top: 5%;
+    right: 1%; 
+      display: none;
+}
+main{
+    width: 1920px;
+    height: 1080px;
+    background-image: url(1.jpg);
+    
+}
+h1{
+   color: white;
+    font-size: 3.1em;
+position: absolute;
+    top: 5%;
+    left: 45%;
+     text-shadow: 1px 1px 1px black;
+}
+h2{
+   color: white;
+    font-size: 2.6em;
+   text-shadow: 1px 1px 1px black;
+}
+
+#div_mih{
+  width: 360px;
+    height: 500px;
+   background-image: url(mih.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    position: absolute;
+    top:15%;
+    left: 20%;
+}
+
+#div_len{
+    width: 360px;
+    height: 500px;
+   background-image: url(img/len.jpg);
+    background-size: cover;
+    position: absolute;
+    top:15%;
+    right: 20%;
+}
+button{
+    width: 360px;
+    height: 80px;
+    background-color: #18bc18;
+   color: white;
+    font-size: 2.1em;
+}
+#btn_mih{
+  position: absolute;
+    top:45%;
+    left: 20%; 
+}
+#btn_len{
+ position: absolute;
+    top:45%;
+    right: 20%;   
+}
+#h2_mih{
+    width: 400px;
+    position: absolute;
+    top:53%;
+    left: 19%; 
+    text-align: center;
+}
+#h2_len{
+    width: 400px;
+    position: absolute;
+    top:53%;
+right: 19%;
+    text-align: center;
+}
+/*    footer*/
+
+footer{
+    width: 100%;
+   height: 160px;
+    background-color: black;
+    display: flex;
+    
+}
+#div_fut1{
+ width: 50%; 
+ height: 100%;
+display: flex;
+ justify-content: center;
+  flex-wrap: wrap;  
+  align-items: center;
+    padding: 1%;
+  
+}
+#div_fut2{
+  width: 50%;
+  height: 100%; 
+  display: flex;
+ justify-content: center;
+    align-items: center;
+  flex-wrap: wrap;  
+  padding: 1%;
+    
+}
+footer span{
+    color: white;
+    height: 50px;
+    font-size: 1.5em; width: 100%; 
+    text-align: center;
+}
+#ikon11{
+    width: 50px;
+    height: 50px;
+   background-image: url(ikon1.png); 
+    background-size: cover;
+    cursor: pointer;
+    margin: 0;
+    margin-left: 37%;
+    
+}
+#ikon12{
+   width: 50px;
+    height: 50px;
+   background-image: url(ikon2.png); 
+    background-size: cover; 
+    margin: 0;
+    cursor: pointer;
+    margin-left: 2%; 
+}
+#ikon13{
+   width: 50px;
+    height: 50px;
+   background-image: url(ikon3.png); 
+    background-size: cover;  
+    margin-left: 2%;
+    cursor: pointer;
+}
+#ikon21{
+  width: 50px;
+    height: 50px;
+   background-image: url(ikon1.png); 
+    background-size: cover;  
+    cursor: pointer;
+    margin-left: 37%;
+    margin: 0;
+}
+#ikon22{
+  width: 50px;
+    height: 50px;
+   background-image: url(ikon2.png); 
+    background-size: cover;  
+    cursor: pointer;
+    margin: 0;
+    margin-left: 3%;
+}
+#ikon23{
+  width: 50px;
+    height: 50px;
+   background-image: url(ikon3.png); 
+    background-size: cover;   
+    cursor: pointer;
+    margin: 0;
+    margin-left: 3%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
