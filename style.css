@@ -16,8 +16,8 @@ text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 /*     header*/
 
 header{
-    width: 60px;
-    height: 40px;
+    width: 48px;
+    height: 30px;
    position: fixed;
     top: 20px;
     right: 2%;
@@ -38,19 +38,19 @@ header:hover{
 
 #hed1{
   width: 90%;
-  height: 6px;
+  height: 5px;
     background-color:#AD00FF;
    
 }
 #hed2{
    width: 90%;
-  height: 6px;
+  height: 5px;
     background-color:#AD00FF; 
    
 }
 #hed3{
     width: 90%;
-  height: 6px;
+  height: 5px;
     background-color:#AD00FF; 
    
 }
@@ -137,6 +137,7 @@ li{
     justify-content: space-around;
     flex-wrap: wrap;
     border-radius: 10px;
+    
 }
 
 #div21{
@@ -178,8 +179,12 @@ background-color:#21201F;
     -webkit-box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
 -moz-box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
 box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
+  transition: all 0.5s;  
 }
-
+#div2 button:hover{
+   cursor: pointer;
+    background-color: #8d00d0;
+}
    /*div3*/
 
 #div3{
@@ -248,8 +253,13 @@ box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
 #div5 button{
     width: 60%;
     font-size: 1.3em;
+    margin-top: 5%;
+    transition: all 0.5s;
 }
-
+#div5 button:hover{
+   cursor: pointer;
+    background-color: #8d00d0;
+}
   /*div6*/
 
 #div6{
