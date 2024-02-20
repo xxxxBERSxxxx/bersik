@@ -21,13 +21,13 @@ header{
    position: fixed;
     top: 20px;
     right: 2%;
-    border-radius: 10px;
-    z-index: 2;
+    border-radius: 5px;
+    z-index: 3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-     
+  
 }
 header:hover{
     #hed1, #hed2, #hed3{
@@ -36,24 +36,57 @@ header:hover{
     }
 }
 
+#head_menu{
+   width: 500px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    -webkit-box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
+-moz-box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
+box-shadow: 1px 1px 24px 1px rgba(189,  0,  255, 0.56);
+    z-index: 1;
+    padding: 5%;
+  
+}
+#head_menu li{
+    list-style: none;
+    height: 60px;
+    margin-top: 10%;
+    border: 1px solid #AD00FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+#head_menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 2.3em;
+   
+}
+
 #hed1{
-  width: 90%;
+  width: 70%;
   height: 5px;
     background-color:#AD00FF;
-   
+   z-index: 2;
 }
 #hed2{
-   width: 90%;
+   width: 70%;
   height: 5px;
     background-color:#AD00FF; 
-   
+   z-index: 2;
 }
 #hed3{
-    width: 90%;
+    width: 70%;
   height: 5px;
     background-color:#AD00FF; 
-   
+   z-index: 2;
 }
+
+/* ------------------*/
 
 nav{
     width: 14%;
@@ -80,7 +113,11 @@ h1{
     font-size: 2.2em;
 width: 70%;
 }
-
+h1 span{
+   font-size: 1.3em;
+    width: 100%;
+    color: #AD00FF;
+}
 h2{
  font-size: 1.1em;
     color: white;

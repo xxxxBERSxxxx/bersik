@@ -1025,24 +1025,27 @@ font-size: 0.7em;
     height: 30px;
    position: fixed;
     top: 30px;
-    right: 3%;
-    border-radius: 10px;   
+    right: 3%; 
 }
-
+    
+    #head_menu{
+        width: 400px;
+    }
+  #head_menu li{
+    height: 60px;
+    margin-top: 10%;
+}
+#head_menu a{
+    font-size: 1.8em;
+}  
 #hed1{
-  width: 90%;
- background-color:#AD00FF;
-   
+  
 }
 #hed2{
-   width: 90%;
-    background-color:#AD00FF; 
-   
+ 
 }
 #hed3{
-    width: 90%;
-    background-color:#AD00FF; 
-   
+
 } 
 }
 /*---------------*/
@@ -1054,26 +1057,26 @@ font-size: 0.7em;
    position: fixed;
     top: 30px;
     right: 3%;
-    border-radius: 10px;   
+      
 }
-
+   #head_menu{
+        width: 400px;
+    }
+  #head_menu li{
+    height: 60px;
+    margin-top: 10%;
+}
+#head_menu a{
+    font-size: 1.8em;
+}  
 #hed1{
-  width: 80%;
-
- background-color:#AD00FF;
-   
+ 
 }
 #hed2{
-   width: 80%;
   
-    background-color:#AD00FF; 
-   
 }
 #hed3{
-    width: 80%;
  
-    background-color:#AD00FF; 
-   
 } 
 }
 /*---------------*/
@@ -1083,20 +1086,30 @@ font-size: 0.7em;
     width: 50px;
     height: 30px;
     top: 26px;
-    right: 3%;
-    border-radius: 10px;  
+    right: 3%; 
 }
-
+   #head_menu{
+        width: 400px;
+       padding-top: 10%;
+    }
+  #head_menu li{
+    height: 60px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.8em;
+}  
+    
 #hed1{
-  width: 80%;
+
   height: 4px; 
 }
 #hed2{
-   width: 80%;
+ 
   height: 4px;
 }
 #hed3{
-    width: 80%;
+  
   height: 4px;
 } 
 }
@@ -1108,19 +1121,29 @@ font-size: 0.7em;
     height: 30px;
     top: 26px;
     right: 3%;
-    border-radius: 10px;  
+   
 }
-
+   #head_menu{
+        width: 400px;
+       padding-top: 10%;
+    }
+  #head_menu li{
+    height: 60px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.8em;
+} 
 #hed1{
-  width: 80%;
+ 
   height: 4px; 
 }
 #hed2{
-   width: 80%;
+ 
   height: 4px;
 }
 #hed3{
-    width: 80%;
+   
   height: 4px;
 } 
 }
@@ -1132,19 +1155,28 @@ font-size: 0.7em;
     height: 30px;
     top: 26px;
     right: 3%;
-    border-radius: 10px;  
 }
-
+   #head_menu{
+        width: 300px;
+       padding-top: 13%;
+    }
+  #head_menu li{
+    height: 50px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.6em;
+} 
 #hed1{
-  width: 80%;
+
   height: 3px; 
 }
 #hed2{
-   width: 80%;
+
   height: 3px;
 }
 #hed3{
-    width: 80%;
+  
   height: 3px;
 } 
 }
@@ -1156,19 +1188,28 @@ font-size: 0.7em;
     height: 25px;
     top: 20px;
     right: 3%;
-    border-radius: 10px;  
 }
-
+   #head_menu{
+        width: 300px;
+       padding-top: 13%;
+    }
+  #head_menu li{
+    height: 50px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.6em;
+}
 #hed1{
-  width: 80%;
+  
   height: 3px; 
 }
 #hed2{
-   width: 80%;
+ 
   height: 3px;
 }
 #hed3{
-    width: 80%;
+   
   height: 3px;
 } 
 }
@@ -1179,20 +1220,29 @@ font-size: 0.7em;
     width: 46px;
     height: 26px;
     top: 22px;
-    right: 3%;
-    border-radius: 10px; 
+    right: 3%; 
 }
-
+   #head_menu{
+        width: 300px;
+       padding-top: 13%;
+    }
+  #head_menu li{
+    height: 46px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.4em;
+}
 #hed1{
-  width: 80%;
+
   height: 3px; 
 }
 #hed2{
-   width: 80%;
+  
   height: 3px;
 }
 #hed3{
-    width: 80%;
+  
   height: 3px;
 } 
 }
@@ -1203,20 +1253,29 @@ font-size: 0.7em;
     width: 46px;
     height: 26px;
     top: 20px;
-    right: 3%;
-    border-radius: 10px; 
+    right: 3%;  
 }
-
+   #head_menu{
+        width: 300px;
+       padding-top: 16%;
+    }
+  #head_menu li{
+    height: 46px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.4em;
+}
 #hed1{
-  width: 80%;
+
   height: 3px; 
 }
 #hed2{
-   width: 80%;
+ 
   height: 3px;
 }
 #hed3{
-    width: 80%;
+ 
   height: 3px;
 } 
 }
@@ -1228,19 +1287,28 @@ font-size: 0.7em;
     height: 26px;
     top: 20px;
     right: 3%;
-    border-radius: 10px; 
 }
-
+   #head_menu{
+        width: 300px;
+       padding-top: 18%;
+    }
+  #head_menu li{
+    height: 46px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.4em;
+}
 #hed1{
-  width: 80%;
+  
   height: 3px; 
 }
 #hed2{
-   width: 80%;
+
   height: 3px;
 }
 #hed3{
-    width: 80%;
+ 
   height: 3px;
 } 
 }
@@ -1251,20 +1319,29 @@ font-size: 0.7em;
     width: 46px;
     height: 26px;
     top: 20px;
-    right: 3%;
-    border-radius: 10px; 
+    right: 3%; 
 }
-
+   #head_menu{
+        width: 260px;
+       padding-top: 20%;
+    }
+  #head_menu li{
+    height: 46px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.4em;
+}
 #hed1{
-  width: 80%;
+  
   height: 3px; 
 }
 #hed2{
-   width: 80%;
+
   height: 3px;
 }
 #hed3{
-    width: 80%;
+  
   height: 3px;
 } 
 }
@@ -1276,19 +1353,28 @@ font-size: 0.7em;
     height: 22px;
     top: 20px;
     right: 3%;
-    border-radius: 10px; 
 }
-
+  #head_menu{
+        width: 220px;
+       padding-top: 20%;
+    }
+  #head_menu li{
+    height: 40px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.2em;
+}
 #hed1{
-  width: 80%;
+
   height: 2px; 
 }
 #hed2{
-   width: 80%;
+ 
   height: 2px;
 }
 #hed3{
-    width: 80%;
+   
   height: 2px;
 } 
 }
@@ -1300,19 +1386,28 @@ font-size: 0.7em;
     height: 18px;
     top: 20px;
     right: 3%;
-    border-radius: 10px; 
 }
-
+  #head_menu{
+        width: 160px;
+       padding-top: 30%;
+    }
+  #head_menu li{
+    height: 30px;
+    margin-top: 12%;
+}
+#head_menu a{
+    font-size: 1.0em;
+}
 #hed1{
-  width: 80%;
+
   height: 2px; 
 }
 #hed2{
-   width: 80%;
+
   height: 2px;
 }
 #hed3{
-    width: 80%;
+
   height: 2px;
 } 
 }
