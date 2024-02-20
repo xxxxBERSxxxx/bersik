@@ -23,16 +23,46 @@ header{
     top: 20px;
     right: 2%;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: #21201F;
     z-index: 3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  
+}
+header:hover{
+ cursor: pointer;
+    
+#hed1{
+   background-color:#7307a7; 
+}
+#hed2{
+   background-color:#7307a7; 
+}
+#hed3{
+    background-color:#7307a7; 
+}  
 }
 
-
+/*
+header:active{
+#hed1{
+  display: none;
+}
+#hed2{
+  display: none;
+}
+#hed3{
+   display: none;
+}  
+}
+*/
+.activ{
+  border: 2px solid #7307a7;
+}
+.no{
+    display: none;
+}
 
 #head_menu{
    width: 500px;
@@ -46,8 +76,8 @@ header{
 box-shadow: 1px 1px 24px 1px rgba(189,  0,  255, 0.56);
     z-index: 1;
     padding: 5%;
-  
 }
+
 #head_menu li{
     list-style: none;
     height: 60px;
