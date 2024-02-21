@@ -51,6 +51,8 @@
 
 let header1=document.querySelector("#header1");
 
+let head_menu=document.querySelector("#head_menu");
+
 let hed1=document.querySelector('#hed1');
 
 let hed2=document.querySelector('#hed2');
@@ -62,6 +64,36 @@ header1.addEventListener('click', function main(){
  hed1.classList.toggle('no');   
   hed2.classList.toggle('no');
 hed3.classList.toggle('no'); 
+});
+
+header1.addEventListener('click', function main1(){
+ if(head_menu.classList.contains("head_menu_no")){
+ head_menu.classList.toggle("head_menu_activ");
+    }});
+
+window.addEventListener('click', e=>{
+    const target=e.target;
+    if(!target.closest('#head_menu') && !target.closest('#header1')){
+    head_menu.classList.remove(("head_menu_activ")); 
+    }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
