@@ -1,0 +1,214 @@
+body{
+    background-color: black;
+}
+
+
+
+
+        /*header*/
+
+header{
+    width: 48px;
+    height: 30px;
+   position: fixed;
+    top: 20px;
+    right: 2%;
+    border-radius: 5px;
+    background-color: #21201F;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+header:hover{
+ cursor: pointer;
+    
+#hed1{
+   background-color:#7307a7; 
+}
+#hed2{
+   background-color:#7307a7; 
+}
+#hed3{
+    background-color:#7307a7; 
+}  
+}
+
+.activ{
+  border: 2px solid #7307a7;
+}
+.no{
+    display: none;
+}
+
+#head_menu{
+   width: 500px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    
+    z-index: 1;
+    padding: 5%;
+    transition: all 0.4s;
+}
+.head_menu_no{
+   right: -100%; 
+}
+.head_menu_activ{
+    right: 0;
+}
+#head_menu li{
+    list-style: none;
+    height: 60px;
+    margin-top: 10%;
+    border: 2px solid #a39fa5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#head_menu li:hover{
+    background-color: #21201F;
+ 
+}
+
+#head_menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+}
+
+#hed1{
+  width: 70%;
+  height: 5px;
+    background-color:#a39fa5;
+   z-index: 2;
+}
+#hed2{
+   width: 70%;
+  height: 5px;
+    background-color:#a39fa5; 
+   z-index: 2;
+}
+#hed3{
+    width: 70%;
+  height: 5px;
+    background-color:#a39fa5; 
+   z-index: 2;
+}
+
+     /*main*/
+main{
+    width: 100%;
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url(img/fon_trener.jpg);
+    margin-top: 4%;
+    background-size: cover;
+}
+h1{
+    color: white;
+    font-size: 2.3em;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    text-align: center;
+}
+
+#div_mih{
+    width: 70%;
+    height: 450px;
+    border: 2px solid #a39fa5;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.6); /* Прозрачность */
+    position: relative;
+}
+#div_len{
+    width: 70%;
+    height: 450px;
+    border: 2px solid #a39fa5;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.6);
+   position: relative;
+}
+#mih{
+  width: 20%; 
+    height: 80%;
+    background-image: url(img/mih.jpg);
+    background-size: cover;
+   position: absolute;
+    right: 10%;
+    top: 10%;
+    border-radius: 20px;
+    border: 2px solid #a39fa5;
+}
+#len{
+  width: 20%; 
+    height: 80%;
+    background-image: url(img/len.jpg);
+    background-size: cover;
+   position: absolute;
+    right: 10%;
+    top: 10%;
+    border-radius: 20px;
+    border: 2px solid #a39fa5;
+}
+button{
+    width: 20%;
+    height: 70px;
+    position: absolute;
+   left: 33%;
+    top: 60%; 
+   color: white;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 2.0em;
+    border: 2px solid #a39fa5;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

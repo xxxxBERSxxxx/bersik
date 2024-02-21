@@ -75,8 +75,9 @@ window.addEventListener('click', e=>{
     const target=e.target;
     if(!target.closest('#head_menu') && !target.closest('#header1')){
     head_menu.classList.remove(("head_menu_activ")); 
+
     }
-})
+});
 
 
 

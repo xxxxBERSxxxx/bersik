@@ -5,12 +5,9 @@
 body{
     background-color: black;
     margin: 0 auto;
-    
 -webkit-text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 -moz-text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
-text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
-    
-   
+text-shadow: 1px 1px 0px rgba(0, 0, 0, 1); 
 }
 
 
@@ -85,6 +82,9 @@ box-shadow: 1px 1px 24px 1px rgba(189,  0,  255, 0.56);
 }
 #head_menu li:hover{
     background-color: #21201F;
+     -webkit-box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
+-moz-box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
+box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56); 
 }
 
 #head_menu a{
@@ -184,7 +184,7 @@ li{
     width: 100%;
     height: 520px; 
     margin-bottom: 2%;
-    background-image: url(1.jpg);
+    background-image: url(img/1.jpg);
     background-size: cover;
     background-position: center;
     padding: 2% 3%;
@@ -207,7 +207,7 @@ li{
 #div21{
  width: 40%;
     height: 240px;
-    background-image: url(2.jpg);
+    background-image: url(img/2.jpg);
     background-size: cover;
     background-position: center;
     margin-top: 10%;
@@ -218,7 +218,7 @@ border: 2px solid #AD00FF;
 #div22{
   width: 40%;
     height: 240px;
-    background-image: url(3.jpg);
+    background-image: url(img/3.jpg);
     background-size: cover;
     background-position: center; 
      margin-top: 10%;
@@ -392,7 +392,7 @@ box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
 #div71{
   width: 16%;
     height: 66%;
-    background-image: url(6.jpg);
+    background-image: url(img/6.jpg);
     background-size: cover;
     background-position: center;
     border: 2px solid #AD00FF; 
@@ -402,7 +402,7 @@ box-shadow: 1px 1px 14px 1px rgba(189,  0,  255, 0.56);
 #div72{
   width: 16%;
     height: 66%;
-    background-image: url(5.jpg);
+    background-image: url(img/5.jpg);
     background-size: cover;
     background-position: center;  
     border: 2px solid #AD00FF; 
