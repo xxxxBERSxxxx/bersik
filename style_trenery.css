@@ -5,121 +5,24 @@ body{
 
 
 
-        /*header*/
+     /*-----main-------*/
 
-header{
-    width: 48px;
-    height: 30px;
-   position: fixed;
-    top: 20px;
-    right: 2%;
-    border-radius: 5px;
-    background-color: #21201F;
-    z-index: 3;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.4s;
-}
-
-header:hover{
- cursor: pointer;
-    
-#hed1{
-   background-color:#7307a7; 
-}
-#hed2{
-   background-color:#7307a7; 
-}
-#hed3{
-    background-color:#7307a7; 
-}  
-}
-
-.activ{
-  border: 2px solid #7307a7;
-}
-.no{
-    display: none;
-}
-
-#head_menu{
-   width: 500px;
-    height: 100%;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    
-    z-index: 1;
-    padding: 5%;
-    transition: all 0.4s;
-}
-.head_menu_no{
-   right: -100%; 
-}
-.head_menu_activ{
-    right: 0;
-}
-#head_menu li{
-    list-style: none;
-    height: 60px;
-    margin-top: 10%;
-    border: 2px solid #a39fa5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    cursor: pointer;
-}
-#head_menu li:hover{
-    background-color: #21201F;
- 
-}
-
-#head_menu a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.3em;
-}
-
-#hed1{
-  width: 70%;
-  height: 5px;
-    background-color:#a39fa5;
-   z-index: 2;
-}
-#hed2{
-   width: 70%;
-  height: 5px;
-    background-color:#a39fa5; 
-   z-index: 2;
-}
-#hed3{
-    width: 70%;
-  height: 5px;
-    background-color:#a39fa5; 
-   z-index: 2;
-}
-
-     /*main*/
 main{
     width: 100%;
     height: 1080px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     background-image: url(img/fon_trener.jpg);
-    margin-top: 4%;
+    
     background-size: cover;
 }
 h1{
+    width: 100%;
+    height: 20%;
     color: white;
     font-size: 2.3em;
-    position: absolute;
-    left: 30%;
-    top: 20%;
     text-align: center;
 }
 
@@ -128,25 +31,51 @@ h1{
     height: 450px;
     border: 2px solid #a39fa5;
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.6); /* Прозрачность */
-    position: relative;
+    background: rgba(0, 0, 0, 0.6); /* Прозрачность */ 
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
 }
+#div_mih1{
+    width: 60%;
+    height: 100%;
+    border-radius: 30px;
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
 #div_len{
-    width: 70%;
+      width: 70%;
     height: 450px;
     border: 2px solid #a39fa5;
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.6);
-   position: relative;
+    background: rgba(0, 0, 0, 0.6); /* Прозрачность */ 
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#div_len1{
+    width: 60%;
+    height: 100%;
+
+    border-radius: 30px;
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
 }
 #mih{
   width: 20%; 
     height: 80%;
     background-image: url(img/mih.jpg);
     background-size: cover;
-   position: absolute;
-    right: 10%;
-    top: 10%;
     border-radius: 20px;
     border: 2px solid #a39fa5;
 }
@@ -155,18 +84,13 @@ h1{
     height: 80%;
     background-image: url(img/len.jpg);
     background-size: cover;
-   position: absolute;
-    right: 10%;
-    top: 10%;
+
     border-radius: 20px;
     border: 2px solid #a39fa5;
 }
 button{
-    width: 20%;
+    width: 50%;
     height: 70px;
-    position: absolute;
-   left: 33%;
-    top: 60%; 
    color: white;
     background: rgba(0, 0, 0, 0.6);
     font-size: 2.0em;
@@ -174,35 +98,603 @@ button{
     border-radius: 15px;
 }
 
+    /*footer*/
+
+footer{
+    width: 93%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+   margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    padding: 2%;
+}
+#foot_len{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+#foot_mih{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#foot_len ul{
+    padding: 0;
+    list-style: none;
+    color: gray;
+    font-size: 1.1em;
+}
+
+#foot_mih ul{
+    padding: 0;
+    text-align: end;
+    list-style: none;
+    color: gray;
+    font-size: 1.1em;
+}
+footer li{
+    margin-top: 7%;
+}
+footer a{
+    color: gray;
+    text-decoration: none;
+}
+
+/*         @media*/
 
 
+@media (min-width:1500px) and (max-width: 1600px) {
+    #div_mih{
+        height: 400px;
+    }  
+    #div_len{
+        height: 400px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    
+}
+
+    /*------------------*/
+
+@media (min-width:1400px) and (max-width: 1500px) {
+    #div_mih{
+        height: 400px;
+    }  
+    #div_len{
+        height: 400px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+    }
+    #len{
+      height: 64%;   
+    }
+}
+
+ /*------------------*/
 
 
+@media (min-width:1300px) and (max-width: 1400px) {
+    #div_mih{
+        height: 400px;
+    }  
+    #div_len{
+        height: 400px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 60%;  
+    }
+    #len{
+      height: 60%;   
+    }
+    h1{
+        font-size: 1.9em;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:1200px) and (max-width: 1300px) {
+    main{
+        height: 840px;
+    }
+    #div_mih{
+        height: 320px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    }  
+    #div_len{
+        height: 320px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 10px;  
+    }
+    #len{
+      height: 64%;   
+       border-radius: 10px;  
+    }
+    h1{
+        font-size: 1.9em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 1.5em;
+        height: 50px;
+        border-radius: 10px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:1100px) and (max-width: 1200px) {
+    main{
+        height: 840px;
+    }
+    #div_mih{
+        height: 320px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    }  
+    #div_len{
+        height: 320px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 10px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 64%;   
+       border-radius: 10px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 1.7em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 1.4em;
+        height: 50px;
+        border-radius: 10px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:1000px) and (max-width: 1100px) {
+    main{
+        height: 840px;
+    }
+    #div_mih{
+        height: 300px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    }  
+    #div_len{
+        height: 300px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 10px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 64%;   
+       border-radius: 10px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 1.7em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 1.4em;
+        height: 50px;
+        border-radius: 10px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:900px) and (max-width: 1000px) {
+    main{
+        height: 700px;
+    }
+    #div_mih{
+        height: 280px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    }  
+    #div_len{
+        height: 280px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 10px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 64%;   
+       border-radius: 10px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 1.7em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 1.4em;
+        height: 50px;
+        border-radius: 10px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:800px) and (max-width: 900px) {
+    main{
+        height: 700px;
+    }
+    #div_mih{
+        height: 260px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    }  
+    #div_len{
+        height: 260px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 10px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 64%;   
+       border-radius: 10px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 1.3em;
+        height: 48px;
+        border-radius: 10px;
+    }
+}
 
+ /*------------------*/
+@media (min-width:700px) and (max-width: 800px) {
+    main{
+        height: 600px;
+    }
+    #div_mih{
+        height: 220px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    }  
+    #div_len{
+        height: 220px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 10px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 64%;   
+       border-radius: 10px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 1.4em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 1.1em;
+        height: 44px;
+        border-radius: 10px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:600px) and (max-width: 700px) {
+    main{
+        height: 500px;
+    }
+    #div_mih{
+        height: 200px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    }  
+    #div_len{
+        height: 200px;
+         border: 1px solid #a39fa5;
+         border-radius: 10px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 10px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 64%;   
+       border-radius: 10px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 1.3em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 1.0em;
+        height: 44px;
+        border-radius: 10px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:500px) and (max-width: 600px) {
+    main{
+        height: 500px;
+    }
+    #div_mih{
+        height: 160px;
+         border: 1px solid #a39fa5;
+         border-radius: 5px;
+    }  
+    #div_len{
+        height: 160px;
+         border: 1px solid #a39fa5;
+         border-radius: 5px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 5px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 64%;   
+       border-radius: 5px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 1.1em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 0.7em;
+        height: 30px;
+        border-radius: 5px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:400px) and (max-width: 500px) {
+    main{
+        height: 360px;
+    }
+    #div_mih{
+        height: 130px;
+         border: 1px solid #a39fa5;
+         border-radius: 5px;
+    }  
+    #div_len{
+        height: 130px;
+         border: 1px solid #a39fa5;
+         border-radius: 5px;
+    } 
+    #div_mih1{
+        width: 50%;
+    }  
+    #div_len1{
+       width: 50%; 
+    } 
+    #mih{
+      height: 64%;  
+       border-radius: 5px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 64%;   
+       border-radius: 5px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 0.8em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 0.7em;
+        height: 30px;
+        border-radius: 5px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:300px) and (max-width: 400px) {
+    main{
+        height: 300px;
+    }
+    #div_mih{
+        height: 100px;
+         border: 1px solid #a39fa5;
+         border-radius: 5px;
+    }  
+    #div_len{
+        height: 100px;
+         border: 1px solid #a39fa5;
+         border-radius: 5px;
+    } 
+    #div_mih1{
+        width: 50%;
+        
+    }  
+    #div_len1{
+       width: 50%; 
+        
+    } 
+    #mih{
+      height: 50%; 
+        
+       border-radius: 5px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 50%; 
+        
+       border-radius: 5px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 0.7em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 0.5em;
+        height: 20px;
+        border-radius: 5px;
+    }
+}
 
+ /*------------------*/
 
+@media (min-width:200px) and (max-width: 300px) {
+    main{
+        height: 200px;
+    }
+    #div_mih{
+        height: 80px;
+         border: 1px solid #a39fa5;
+         border-radius: 2px;
+    }  
+    #div_len{
+        height: 80px;
+         border: 1px solid #a39fa5;
+         border-radius: 2px;
+    } 
+    #div_mih1{
+        width: 50%;
+        
+    }  
+    #div_len1{
+       width: 50%; 
+        
+    } 
+    #mih{
+      height: 50%; 
+        
+       border-radius: 2px; 
+       border: 1px solid #a39fa5; 
+    }
+    #len{
+      height: 50%; 
+        
+       border-radius: 2px;
+       border: 1px solid #a39fa5; 
+    }
+    h1{
+        font-size: 0.5em;
+    }
+    button{
+      border: 1px solid #a39fa5; 
+        font-size: 0.2em;
+        width: 100%;
+        
+        height: 16px;
+        border-radius: 2px;
+    }
+}
 
-
-
-
+ /*------------------*/
 
 
 

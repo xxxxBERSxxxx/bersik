@@ -1,0 +1,144 @@
+@media (min-width: 600px) and (max-width: 900px){
+footer{
+    height: 140px;
+    padding: 1%;
+}
+#foot_len{
+
+}
+#foot_mih{
+
+}
+#foot_len ul{
+    font-size: 0.8em;
+}
+
+#foot_mih ul{
+   font-size: 0.8em;
+}
+footer li{
+    font-size: 0.8em;
+}
+footer a{
+
+}
+} 
+
+/*--------------*/
+
+@media (min-width: 400px) and (max-width: 600px){
+footer{
+    height: 120px;
+    padding: 1%;
+}
+#foot_len{
+
+}
+#foot_mih{
+
+}
+#foot_len ul{
+    font-size: 0.6em;
+}
+
+#foot_mih ul{
+   font-size: 0.6em;
+}
+footer li{
+    font-size: 0.9em;
+}
+footer a{
+
+}
+} 
+
+/*--------------*/
+
+@media (min-width: 400px) and (max-width: 600px){
+footer{
+    height: 120px;
+    padding: 1%;
+}
+#foot_len{
+
+}
+#foot_mih{
+
+}
+#foot_len ul{
+    font-size: 0.6em;
+}
+
+#foot_mih ul{
+   font-size: 0.6em;
+}
+footer li{
+    font-size: 0.9em;
+}
+footer a{
+
+}
+} 
+
+/*--------------*/
+
+@media (min-width: 300px) and (max-width: 400px){
+footer{
+    height: 100px;
+    padding: 1%;
+}
+#foot_len{
+
+}
+#foot_mih{
+
+}
+#foot_len ul{
+    font-size: 0.5em;
+}
+
+#foot_mih ul{
+   font-size: 0.5em;
+}
+footer li{
+    font-size: 0.9em;
+}
+footer a{
+
+}
+} 
+
+/*--------------*/
+
+@media (min-width: 200px) and (max-width: 300px){
+footer{
+    height: 90px;
+    padding: 1%;
+}
+#foot_len{
+width: 40%;
+}
+#foot_mih{
+width: 40%;
+}
+#foot_len ul{
+    font-size: 0.46em;
+}
+
+#foot_mih ul{
+   font-size: 0.46em;
+}
+footer li{
+    font-size: 6px;
+    margin-top: 10%;
+}
+footer a{
+
+}
+} 
+
+
+
+
+
+

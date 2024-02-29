@@ -1,98 +1,45 @@
-//
-//        //закрывающее меню
-//
-//let head = document.getElementById('head');
-//let head_menu = document.getElementById('head_menu');
-//
-//
-//head.addEventListener('click', function Menu(){
-// head_menu.classList.toggle("head_menu_yes");    
-//});
-//
-//
-//window.addEventListener('click', e=>{
-//    const target=e.target;
-//    if(!target.closest('#head_menu') && !target.closest('#head')){
-//       head_menu.classList.remove(("head_menu_yes")); 
-//    }
-//})
-//
-//     //фуутер переход по иконкам
-////миша
-//let ikon11= document.querySelector('#ikon11');
-//let ikon12= document.querySelector('#ikon12');
-//let ikon13= document.querySelector('#ikon13');
-////лена
-//let ikon21= document.querySelector('#ikon21');
-//let ikon22= document.querySelector('#ikon22');
-//let ikon23= document.querySelector('#ikon23');
-//
-////миша
-//ikon11.addEventListener('click', function(){
-//   window.location.href='https://vk.com/xxxxbersxxxx';
-//});
-//ikon12.addEventListener('click', function(){
-//   window.location.href='https://t.me/+79996062616';
-//});
-//ikon13.addEventListener('click', function(){
-//   window.location.href='https://wa.me/79996062616';
-//});
-//
-////лена
-//ikon21.addEventListener('click', function(){
-//   window.location.href='https://vk.com/id222603101';
-//});
-//ikon22.addEventListener('click', function(){
-//   window.location.href='https://t.me/+79038741898';
-//});
-//ikon23.addEventListener('click', function(){
-//   window.location.href='https://wa.me/79038741898';
-//});
 
-let header1=document.querySelector("#header1");
+//ОТКРЫВАЮЩЕЕ И ЗАКРЫВАЮЩЕЕСЯ МЕНЮ
 
-let head_menu=document.querySelector("#head_menu");
-
-let hed1=document.querySelector('#hed1');
-
-let hed2=document.querySelector('#hed2');
-
-let hed3=document.querySelector('#hed3');
-
-header1.addEventListener('click', function main(){
- header1.classList.toggle("activ");
- hed1.classList.toggle('no');   
-  hed2.classList.toggle('no');
-hed3.classList.toggle('no'); 
+$(document).click(function(event){
+if (!$(event.target).closest('#head_menu').length && !$(event.target).is('#head_menu')) {
+$('#head_menu').css({right: "-100%", transition: "1s"});
+}
 });
 
-header1.addEventListener('click', function main1(){
- if(head_menu.classList.contains("head_menu_no")){
- head_menu.classList.toggle("head_menu_activ");
-    }});
+$('#head').click(function(event){
+event.stopPropagation();
+$('#head_menu').css({right: "0%", transition: "1s"});
+});
 
-window.addEventListener('click', e=>{
-    const target=e.target;
-    if(!target.closest('#head_menu') && !target.closest('#header1')){
-    head_menu.classList.remove(("head_menu_activ")); 
+$('#head_menu_zakr').click(function(event){
+event.stopPropagation();
+$('#head_menu').css({right: "-100%", transition: "1s"});
+});
 
-    }
+//------------------
+
+    //цвет наведения на закрывающееся меню
+
+$('#head').hover(function(){
+    $('.head123').css({'background-color': "#AD00FF", });
+}, function(){
+    $('.head123').css({'background-color': "white"});
 });
 
 
 
+$('#head_menu_zakr').hover(function(){
+    $('#head_menu_zakr1').css({'background-color': "#AD00FF", transition: "all 0.3s"});
+}, function(){
+    $('#head_menu_zakr1').css({'background-color': "white", transition: "all 0.3s"});
+});
 
-
-
-
-
-
-
-
-
-
-
-
+$('#head_menu_zakr').hover(function(){
+    $('#head_menu_zakr2').css({'background-color': "#AD00FF", transition: "all 0.3s"});
+}, function(){
+    $('#head_menu_zakr2').css({'background-color': "white", transition: "all 0.3s"});
+});
 
 
 

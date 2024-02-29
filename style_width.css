@@ -146,6 +146,14 @@
        float: none;
         margin: 2% auto;
     }
+     h1{
+        font-size: 1.9em;
+        
+    }
+    h1 span{
+        font-size: 1.3em;
+        margin-bottom: 2%;
+    }
    #div2{
      width: 38%;   
     }
@@ -186,6 +194,14 @@
         width: 94%;
        float: none;
         margin: 2% auto;
+    }
+     h1{
+        font-size: 1.9em;
+        
+    }
+    h1 span{
+        font-size: 1.3em;
+        margin-bottom: 2%;
     }
    #div2{
      width: 38%;   
@@ -244,6 +260,15 @@
        float: none;
         margin: 2% auto;
     }
+     h1{
+        font-size: 1.9em;
+        
+    }
+    h1 span{
+        font-size: 1.3em;
+        margin-bottom: 2%;
+    }
+    
    #div2{
      width: 48%;   
     }
@@ -306,7 +331,14 @@
        float: none;
         margin: 2% auto;
     }
-    
+     h1{
+        font-size: 1.9em;
+        
+    }
+    h1 span{
+        font-size: 1.3em;
+        margin-bottom: 2%;
+    }
    #div2{
      width: 48%;   
     }
@@ -389,7 +421,14 @@
        float: none;
         margin: 2% auto;
     }
-    
+     h1{
+        font-size: 1.8em;
+        
+    }
+    h1 span{
+        font-size: 1.3em;
+        margin-bottom: 2%;
+    }
    #div2{
      width: 48%;   
     }
@@ -483,6 +522,14 @@
         width: 94%;
        float: none;
         margin: 2% auto;
+    }
+     h1{
+        font-size: 1.8em;
+        
+    }
+    h1 span{
+        font-size: 1.3em;
+        margin-bottom: 2%;
     }
     #div1{
         margin-bottom: 5%;
@@ -608,7 +655,18 @@ font-size: 0.48em;
        float: none;
         margin: 2% auto;
     }
+    
+     h1{
+        font-size: 1.7em;
+        
+    }
+    h1 span{
+        font-size: 1.3em;
+        margin-bottom: 2%;
+    }
+    
     #div1{
+        height: 400px;
         margin-bottom: 5%;
         font-size: 0.8em;
     } 
@@ -738,6 +796,15 @@ font-size: 0.7em;
        float: none;
         margin: 2% auto;
     }
+     h1{
+        font-size: 2.0em;
+        
+    }
+    h1 span{
+        font-size: 1.3em;
+        margin-bottom: 2%;
+    }
+    
     #div1{
         margin-bottom: 5%;
         font-size: 0.5em;
@@ -756,10 +823,12 @@ font-size: 0.7em;
     #div21{
      height: 40%;
         margin-top: 10%;
+         border: 1px solid #AD00FF; 
     }
     #div22{
      height: 40%; 
-     margin-top: 10%;   
+     margin-top: 10%;
+      border: 1px solid #AD00FF;    
     }
     #div2 button{
       font-size: 1.0em; 
@@ -795,6 +864,7 @@ font-size: 0.7em;
        height: 60%;
         margin: 12% auto;
         font-size: 0.8em;
+         border: 1px solid #AD00FF; 
     }
     
     #div5{
@@ -829,6 +899,7 @@ font-size: 0.7em;
     .div6_d{
         width: 43%;
         height: 30%;
+         border: 1px solid #AD00FF; 
     }
     .div6_d p{
         font-size: 0.7em;
@@ -850,10 +921,12 @@ font-size: 0.7em;
     #div71{
         width: 40%;
          height: 30%;
+         border: 1px solid #AD00FF; 
     }  
    #div72{
         width: 40%;
        height: 30%;
+        border: 1px solid #AD00FF; 
     } 
     
  #div7 ul{
@@ -878,11 +951,21 @@ font-size: 0.7em;
        float: none;
         margin: 2% auto;
     }
+   
     #div1{
+        margin-top: 2%;
         margin-bottom: 5%;
         font-size: 0.4em;
-        height: 300px;
+        height: 260px;
     } 
+    h1{
+        font-size: 1.9em;
+        
+    }
+    h1 span{
+        font-size: 1.2em;
+        margin-bottom: 2%;
+    }
    #div2{
      width: 100%; 
        height: 300px;
@@ -897,10 +980,12 @@ font-size: 0.7em;
     #div21{
      height: 44%;
         margin-top: 10%;
+         border: 1px solid #AD00FF; 
     }
     #div22{
      height: 44%; 
-     margin-top: 10%;   
+     margin-top: 10%; 
+       border: 1px solid #AD00FF;   
     }
     #div2 button{
       font-size: 0.7em; 
@@ -938,6 +1023,7 @@ font-size: 0.7em;
        height: 60%;
         margin: 12% auto;
         font-size: 0.64em;
+         border: 1px solid #AD00FF; 
     }
     
     #div5{
@@ -957,7 +1043,7 @@ font-size: 0.7em;
         margin-bottom: 5%;
         width: 50%;
         height: 30px;
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
     
     #div6{
@@ -974,6 +1060,7 @@ font-size: 0.7em;
     .div6_d{
         width: 44%;
         height: 26%;
+         border: 1px solid #AD00FF; 
     }
     .div6_d p{
         font-size: 0.5em;
@@ -995,10 +1082,12 @@ font-size: 0.7em;
     #div71{
         width: 40%;
          height: 26%;
+        border: 1px solid #AD00FF; 
     }  
    #div72{
         width: 40%;
        height: 26%;
+        border: 1px solid #AD00FF; 
     } 
     
  #div7 ul{
@@ -1017,401 +1106,26 @@ font-size: 0.7em;
 
 
 
-      /*HEADER*/
-
-@media (min-width:1300px) and (max-width: 1400px) {
-  header{
-    width: 50px;
-    height: 30px;
-   position: fixed;
-    top: 30px;
-    right: 3%; 
-}
-    
-    #head_menu{
-        width: 400px;
-    }
-  #head_menu li{
-    height: 60px;
-    margin-top: 10%;
-}
-#head_menu a{
-    font-size: 1.8em;
-}  
-#hed1{
   
-}
-#hed2{
+
+
+
+
  
-}
-#hed3{
 
-} 
-}
-/*---------------*/
 
-@media (min-width:1200px) and (max-width: 1300px) {
-  header{
-    width: 50px;
-    height: 30px;
-   position: fixed;
-    top: 30px;
-    right: 3%;
-      
-}
-   #head_menu{
-        width: 400px;
-    }
-  #head_menu li{
-    height: 60px;
-    margin-top: 10%;
-}
-#head_menu a{
-    font-size: 1.8em;
-}  
-#hed1{
- 
-}
-#hed2{
-  
-}
-#hed3{
- 
-} 
-}
-/*---------------*/
 
-@media (min-width:1100px) and (max-width: 1200px) {
-  header{
-    width: 50px;
-    height: 30px;
-    top: 26px;
-    right: 3%; 
-}
-   #head_menu{
-        width: 400px;
-       padding-top: 10%;
-    }
-  #head_menu li{
-    height: 60px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.8em;
-}  
-    
-#hed1{
 
-  height: 4px; 
-}
-#hed2{
- 
-  height: 4px;
-}
-#hed3{
-  
-  height: 4px;
-} 
-}
-/*---------------*/
 
-@media (min-width:1000px) and (max-width: 1100px) {
-  header{
-    width: 50px;
-    height: 30px;
-    top: 26px;
-    right: 3%;
-   
-}
-   #head_menu{
-        width: 400px;
-       padding-top: 10%;
-    }
-  #head_menu li{
-    height: 60px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.8em;
-} 
-#hed1{
- 
-  height: 4px; 
-}
-#hed2{
- 
-  height: 4px;
-}
-#hed3{
-   
-  height: 4px;
-} 
-}
-/*---------------*/
 
-@media (min-width:900px) and (max-width: 1000px) {
-  header{
-    width: 50px;
-    height: 30px;
-    top: 26px;
-    right: 3%;
-}
-   #head_menu{
-        width: 300px;
-       padding-top: 13%;
-    }
-  #head_menu li{
-    height: 50px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.6em;
-} 
-#hed1{
 
-  height: 3px; 
-}
-#hed2{
 
-  height: 3px;
-}
-#hed3{
-  
-  height: 3px;
-} 
-}
-/*---------------*/
 
-@media (min-width:800px) and (max-width: 900px) {
-  header{
-    width: 45px;
-    height: 25px;
-    top: 20px;
-    right: 3%;
-}
-   #head_menu{
-        width: 300px;
-       padding-top: 13%;
-    }
-  #head_menu li{
-    height: 50px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.6em;
-}
-#hed1{
-  
-  height: 3px; 
-}
-#hed2{
- 
-  height: 3px;
-}
-#hed3{
-   
-  height: 3px;
-} 
-}
-/*---------------*/
 
-@media (min-width:700px) and (max-width: 800px) {
-  header{
-    width: 46px;
-    height: 26px;
-    top: 22px;
-    right: 3%; 
-}
-   #head_menu{
-        width: 300px;
-       padding-top: 13%;
-    }
-  #head_menu li{
-    height: 46px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.4em;
-}
-#hed1{
 
-  height: 3px; 
-}
-#hed2{
-  
-  height: 3px;
-}
-#hed3{
-  
-  height: 3px;
-} 
-}
-/*---------------*/
 
-@media (min-width: 600px) and (max-width: 700px) {
-  header{
-    width: 46px;
-    height: 26px;
-    top: 20px;
-    right: 3%;  
-}
-   #head_menu{
-        width: 300px;
-       padding-top: 16%;
-    }
-  #head_menu li{
-    height: 46px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.4em;
-}
-#hed1{
 
-  height: 3px; 
-}
-#hed2{
- 
-  height: 3px;
-}
-#hed3{
- 
-  height: 3px;
-} 
-}
-/*---------------*/
 
-@media (min-width: 500px) and (max-width: 600px) {
-  header{
-    width: 46px;
-    height: 26px;
-    top: 20px;
-    right: 3%;
-}
-   #head_menu{
-        width: 300px;
-       padding-top: 18%;
-    }
-  #head_menu li{
-    height: 46px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.4em;
-}
-#hed1{
-  
-  height: 3px; 
-}
-#hed2{
-
-  height: 3px;
-}
-#hed3{
- 
-  height: 3px;
-} 
-}
-/*---------------*/
-
-@media (min-width: 400px) and (max-width: 500px) {
-  header{
-    width: 46px;
-    height: 26px;
-    top: 20px;
-    right: 3%; 
-}
-   #head_menu{
-        width: 260px;
-       padding-top: 20%;
-    }
-  #head_menu li{
-    height: 46px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.4em;
-}
-#hed1{
-  
-  height: 3px; 
-}
-#hed2{
-
-  height: 3px;
-}
-#hed3{
-  
-  height: 3px;
-} 
-}
-/*---------------*/
-
-@media (min-width: 300px) and (max-width: 400px) {
-  header{
-    width: 40px;
-    height: 22px;
-    top: 20px;
-    right: 3%;
-}
-  #head_menu{
-        width: 220px;
-       padding-top: 20%;
-    }
-  #head_menu li{
-    height: 40px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.2em;
-}
-#hed1{
-
-  height: 2px; 
-}
-#hed2{
- 
-  height: 2px;
-}
-#hed3{
-   
-  height: 2px;
-} 
-}
-/*---------------*/
-
-@media (min-width: 200px) and (max-width: 300px) {
-  header{
-    width: 30px;
-    height: 18px;
-    top: 20px;
-    right: 3%;
-}
-  #head_menu{
-        width: 160px;
-       padding-top: 30%;
-    }
-  #head_menu li{
-    height: 30px;
-    margin-top: 12%;
-}
-#head_menu a{
-    font-size: 1.0em;
-}
-#hed1{
-
-  height: 2px; 
-}
-#hed2{
-
-  height: 2px;
-}
-#hed3{
-
-  height: 2px;
-} 
-}
-/*---------------*/
 
 
 
