@@ -1,7 +1,6 @@
 @media (min-width: 600px) and (max-width: 900px){
-footer{
-    height: 140px;
-    padding: 1%;
+  footer{
+    
 }
 #foot_len{
 
@@ -10,19 +9,19 @@ footer{
 
 }
 #foot_len ul{
-    font-size: 0.8em;
+    font-size: 16px;
 }
 
 #foot_mih ul{
-   font-size: 0.8em;
+   font-size: 16px;
 }
 footer li{
-    font-size: 0.8em;
+    font-size: 13px;
 }
 footer a{
 
+}  
 }
-} 
 
 /*--------------*/
 
@@ -38,42 +37,14 @@ footer{
 
 }
 #foot_len ul{
-    font-size: 0.6em;
+    font-size: 15px;
 }
 
 #foot_mih ul{
-   font-size: 0.6em;
+   font-size: 15px;
 }
 footer li{
-    font-size: 0.9em;
-}
-footer a{
-
-}
-} 
-
-/*--------------*/
-
-@media (min-width: 400px) and (max-width: 600px){
-footer{
-    height: 120px;
-    padding: 1%;
-}
-#foot_len{
-
-}
-#foot_mih{
-
-}
-#foot_len ul{
-    font-size: 0.6em;
-}
-
-#foot_mih ul{
-   font-size: 0.6em;
-}
-footer li{
-    font-size: 0.9em;
+    font-size: 12px;
 }
 footer a{
 
@@ -84,24 +55,30 @@ footer a{
 
 @media (min-width: 300px) and (max-width: 400px){
 footer{
-    height: 100px;
+    height: 160px;
     padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 #foot_len{
-
+width: 100%;
+    padding-left: 2%;
 }
 #foot_mih{
-
+width: 100%;
+    padding-right: 2%;
 }
 #foot_len ul{
-    font-size: 0.5em;
+    font-size: 11px;
 }
 
 #foot_mih ul{
-   font-size: 0.5em;
+   font-size: 11px;
 }
 footer li{
-    font-size: 0.9em;
+    font-size: 10px;
+    margin-top: 10%;
 }
 footer a{
 
@@ -112,24 +89,29 @@ footer a{
 
 @media (min-width: 200px) and (max-width: 300px){
 footer{
-    height: 90px;
+    height: 160px;
     padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 #foot_len{
-width: 40%;
+width: 100%;
+    padding-left: 2%;
 }
 #foot_mih{
-width: 40%;
+width: 100%;
+    padding-right: 2%;
 }
 #foot_len ul{
-    font-size: 0.46em;
+    font-size: 11px;
 }
 
 #foot_mih ul{
-   font-size: 0.46em;
+   font-size: 11px;
 }
 footer li{
-    font-size: 6px;
+    font-size: 10px;
     margin-top: 10%;
 }
 footer a{

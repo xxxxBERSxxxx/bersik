@@ -24,7 +24,7 @@ footer{
     padding: 0;
     list-style: none;
     color: gray;
-    font-size: 1.1em;
+    font-size: 18px;
 }
 
 #foot_mih ul{
@@ -32,12 +32,71 @@ footer{
     text-align: end;
     list-style: none;
     color: gray;
-    font-size: 1.1em;
+    font-size: 18px;
 }
 footer li{
     margin-top: 7%;
 }
 footer a{
-    color: gray;
-    text-decoration: none;
+ color: gray; 
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;   
 }
+footer a:after{
+   content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px; /* Высота линии */
+    background-color: grey; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */ 
+}
+footer a:hover:after{
+   	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px; /* Высота линии */
+    background-color: #AD00FF; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */ 
+}
+footer li:hover{
+    transform: scale(1.1);
+}
+footer a:hover{
+    color: #AD00FF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

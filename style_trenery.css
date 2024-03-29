@@ -9,12 +9,14 @@ body{
 
 main{
     width: 100%;
-    height: 1080px;
+    height: auto;
+    padding-bottom: 10%;
+    padding-top: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background-image: url(img/fon_trener.jpg);
+    background-image: url(img/fon_trener1.jpeg);
     
     background-size: cover;
 }
@@ -24,11 +26,16 @@ h1{
     color: white;
     font-size: 2.3em;
     text-align: center;
+    
+    font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #div_mih{
-    width: 70%;
+    width: 60%;
     height: 450px;
+    margin-bottom: 10%;
     border: 2px solid #a39fa5;
     border-radius: 30px;
     background: rgba(0, 0, 0, 0.6); /* Прозрачность */ 
@@ -36,8 +43,12 @@ h1{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    
+    transition: all 0.4s; 
 }
+#div_mih:hover{
+
+}
+
 #div_mih1{
     width: 60%;
     height: 100%;
@@ -50,8 +61,8 @@ h1{
 }
 
 #div_len{
-      width: 70%;
-    height: 450px;
+      width: 60%;
+    height: 450px; 
     border: 2px solid #a39fa5;
     border-radius: 30px;
     background: rgba(0, 0, 0, 0.6); /* Прозрачность */ 
@@ -59,7 +70,12 @@ h1{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    transition: all 0.4s; 
 }
+#div_len:hover{
+   
+}
+
 #div_len1{
     width: 60%;
     height: 100%;
@@ -76,9 +92,19 @@ h1{
     height: 80%;
     background-image: url(img/mih.jpg);
     background-size: cover;
+    background-position: center;
     border-radius: 20px;
     border: 2px solid #a39fa5;
 }
+#mih:hover{
+     transform: scale(1.01);
+     cursor: pointer;
+    
+     -webkit-box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+-moz-box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+}
+
 #len{
   width: 20%; 
     height: 80%;
@@ -88,6 +114,15 @@ h1{
     border-radius: 20px;
     border: 2px solid #a39fa5;
 }
+#len:hover{
+     transform: scale(1.01);
+     cursor: pointer;
+    
+     -webkit-box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+-moz-box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+}
+
 button{
     width: 50%;
     height: 70px;
@@ -96,7 +131,22 @@ button{
     font-size: 2.0em;
     border: 2px solid #a39fa5;
     border-radius: 15px;
+    transition: all 0.2s; 
+    
+     font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
 }
+button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+-moz-box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+box-shadow: 0px 0px 31px 9px rgba(255,  255,  255, 0.5);
+}
+
+
 
     /*footer*/
 
@@ -127,7 +177,7 @@ footer{
     padding: 0;
     list-style: none;
     color: gray;
-    font-size: 1.1em;
+    font-size: 20px;
 }
 
 #foot_mih ul{
@@ -135,15 +185,49 @@ footer{
     text-align: end;
     list-style: none;
     color: gray;
-    font-size: 1.1em;
+    font-size: 20px;
 }
 footer li{
     margin-top: 7%;
+    transition: all 0.3s;
 }
+
+
 footer a{
-    color: gray;
-    text-decoration: none;
+ color: gray; 
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;   
 }
+footer a:after{
+   content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px; /* Высота линии */
+    background-color: grey; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */ 
+}
+footer a:hover:after{
+   	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px; /* Высота линии */
+    background-color: white; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */ 
+}
+footer li:hover{
+    transform: scale(1.1);
+}
+footer a:hover{
+    color: white;
+}
+
 
 /*         @media*/
 
@@ -218,7 +302,7 @@ footer a{
 
 @media (min-width:1200px) and (max-width: 1300px) {
     main{
-        height: 840px;
+     
     }
     #div_mih{
         height: 320px;
@@ -259,7 +343,7 @@ footer a{
 
 @media (min-width:1100px) and (max-width: 1200px) {
     main{
-        height: 840px;
+       
     }
     #div_mih{
         height: 320px;
@@ -302,7 +386,7 @@ footer a{
 
 @media (min-width:1000px) and (max-width: 1100px) {
     main{
-        height: 840px;
+     
     }
     #div_mih{
         height: 300px;
@@ -345,7 +429,7 @@ footer a{
 
 @media (min-width:900px) and (max-width: 1000px) {
     main{
-        height: 700px;
+      
     }
     #div_mih{
         height: 280px;
@@ -388,7 +472,7 @@ footer a{
 
 @media (min-width:800px) and (max-width: 900px) {
     main{
-        height: 700px;
+       
     }
     #div_mih{
         height: 260px;
@@ -407,12 +491,14 @@ footer a{
        width: 50%; 
     } 
     #mih{
-      height: 64%;  
+      height: 64%; 
+        width: 26%;
        border-radius: 10px; 
        border: 1px solid #a39fa5; 
     }
     #len{
       height: 64%;   
+         width: 26%;
        border-radius: 10px;
        border: 1px solid #a39fa5; 
     }
@@ -430,7 +516,8 @@ footer a{
  /*------------------*/
 @media (min-width:700px) and (max-width: 800px) {
     main{
-        height: 600px;
+      padding-top: 15%;
+        padding-bottom: 15%;
     }
     #div_mih{
         height: 220px;
@@ -449,12 +536,14 @@ footer a{
        width: 50%; 
     } 
     #mih{
-      height: 64%;  
+      height: 64%;
+        width: 22%;
        border-radius: 10px; 
        border: 1px solid #a39fa5; 
     }
     #len{
-      height: 64%;   
+      height: 64%;  
+        width: 22%;
        border-radius: 10px;
        border: 1px solid #a39fa5; 
     }
@@ -473,7 +562,8 @@ footer a{
 
 @media (min-width:600px) and (max-width: 700px) {
     main{
-        height: 500px;
+      padding-top: 18%;
+        padding-bottom: 18%;
     }
     #div_mih{
         height: 200px;
@@ -492,12 +582,14 @@ footer a{
        width: 50%; 
     } 
     #mih{
-      height: 64%;  
+      height: 64%; 
+         width: 22%;
        border-radius: 10px; 
        border: 1px solid #a39fa5; 
     }
     #len{
       height: 64%;   
+         width: 22%;
        border-radius: 10px;
        border: 1px solid #a39fa5; 
     }
@@ -516,15 +608,18 @@ footer a{
 
 @media (min-width:500px) and (max-width: 600px) {
     main{
-        height: 500px;
+      padding-top: 18%;
+        padding-bottom: 18%;  
     }
     #div_mih{
-        height: 160px;
+        width: 90%;
+        height: 300px;
          border: 1px solid #a39fa5;
          border-radius: 5px;
     }  
     #div_len{
-        height: 160px;
+        width: 90%;
+        height: 300px;
          border: 1px solid #a39fa5;
          border-radius: 5px;
     } 
@@ -535,12 +630,14 @@ footer a{
        width: 50%; 
     } 
     #mih{
-      height: 64%;  
+      height: 64%; 
+        width: 30%;
        border-radius: 5px; 
        border: 1px solid #a39fa5; 
     }
     #len{
-      height: 64%;   
+      height: 64%; 
+        width: 30%;   
        border-radius: 5px;
        border: 1px solid #a39fa5; 
     }
@@ -548,8 +645,9 @@ footer a{
         font-size: 1.1em;
     }
     button{
+        width: 70%;
       border: 1px solid #a39fa5; 
-        font-size: 0.7em;
+        font-size: 14px;
         height: 30px;
         border-radius: 5px;
     }
@@ -558,16 +656,19 @@ footer a{
  /*------------------*/
 
 @media (min-width:400px) and (max-width: 500px) {
-    main{
-        height: 360px;
+ main{
+      padding-top: 18%;
+        padding-bottom: 18%;  
     }
     #div_mih{
-        height: 130px;
+        width: 90%;
+        height: 300px;
          border: 1px solid #a39fa5;
          border-radius: 5px;
     }  
     #div_len{
-        height: 130px;
+        width: 90%;
+        height: 300px;
          border: 1px solid #a39fa5;
          border-radius: 5px;
     } 
@@ -578,21 +679,24 @@ footer a{
        width: 50%; 
     } 
     #mih{
-      height: 64%;  
+      height: 64%; 
+        width: 30%;
        border-radius: 5px; 
        border: 1px solid #a39fa5; 
     }
     #len{
-      height: 64%;   
+      height: 64%; 
+        width: 30%;   
        border-radius: 5px;
        border: 1px solid #a39fa5; 
     }
     h1{
-        font-size: 0.8em;
+        font-size: 1.1em;
     }
     button{
+        width: 70%;
       border: 1px solid #a39fa5; 
-        font-size: 0.7em;
+        font-size: 14px;
         height: 30px;
         border-radius: 5px;
     }
@@ -601,46 +705,48 @@ footer a{
  /*------------------*/
 
 @media (min-width:300px) and (max-width: 400px) {
-    main{
-        height: 300px;
+ main{
+      padding-top: 18%;
+        padding-bottom: 18%;  
     }
     #div_mih{
-        height: 100px;
+        width: 90%;
+        height: 300px;
          border: 1px solid #a39fa5;
          border-radius: 5px;
     }  
     #div_len{
-        height: 100px;
+        width: 90%;
+        height: 300px;
          border: 1px solid #a39fa5;
          border-radius: 5px;
     } 
     #div_mih1{
         width: 50%;
-        
     }  
     #div_len1{
        width: 50%; 
-        
     } 
     #mih{
-      height: 50%; 
-        
+      height: 44%; 
+        width: 30%;
        border-radius: 5px; 
        border: 1px solid #a39fa5; 
     }
     #len{
-      height: 50%; 
-        
+      height: 44%; 
+        width: 30%;   
        border-radius: 5px;
        border: 1px solid #a39fa5; 
     }
     h1{
-        font-size: 0.7em;
+        font-size: 1.1em;
     }
     button{
+        width: 70%;
       border: 1px solid #a39fa5; 
-        font-size: 0.5em;
-        height: 20px;
+        font-size: 14px;
+        height: 30px;
         border-radius: 5px;
     }
 }
@@ -649,55 +755,192 @@ footer a{
 
 @media (min-width:200px) and (max-width: 300px) {
     main{
-        height: 200px;
+      padding-top: 20%;
+        padding-bottom: 20%;  
+        background-image: none;
     }
     #div_mih{
-        height: 80px;
+        width: 90%;
+        height: 400px;
          border: 1px solid #a39fa5;
-         border-radius: 2px;
+         border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
     }  
     #div_len{
-        height: 80px;
+           width: 90%;
+        height: 400px;
          border: 1px solid #a39fa5;
-         border-radius: 2px;
+         border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
     } 
     #div_mih1{
-        width: 50%;
-        
+        width: 100%;
+        height: 50%;
     }  
     #div_len1{
-       width: 50%; 
-        
+       width: 100%;
+        height: 50%;
     } 
     #mih{
-      height: 50%; 
-        
-       border-radius: 2px; 
+      height: 44%; 
+        width: 60%;
+        margin-bottom: 10%;
+       border-radius: 5px; 
        border: 1px solid #a39fa5; 
     }
     #len{
-      height: 50%; 
-        
-       border-radius: 2px;
+    height: 44%; 
+        width: 60%;
+        margin-bottom: 10%;
+       border-radius: 5px; 
        border: 1px solid #a39fa5; 
     }
     h1{
-        font-size: 0.5em;
+        font-size: 1.1em;
     }
     button{
+        width: 70%;
       border: 1px solid #a39fa5; 
-        font-size: 0.2em;
-        width: 100%;
-        
-        height: 16px;
-        border-radius: 2px;
+        font-size: 14px;
+        height: 30px;
+        border-radius: 5px;
     }
 }
 
- /*------------------*/
+ 
+
+/*------------------*/
+/*      FOOTER    */
+/*------------------*/
+
+@media (min-width: 600px) and (max-width: 900px){
+footer{
+    height: 140px;
+    padding: 1%;
+}
+#foot_len{
+
+}
+#foot_mih{
+
+}
+#foot_len ul{
+    font-size: 16px;
+}
+
+#foot_mih ul{
+   font-size: 16px;
+}
+footer li{
+    font-size: 14px;
+}
+footer a{
+
+}
+} 
 
 
+/*--------------*/
 
+@media (min-width: 400px) and (max-width: 600px){
+footer{
+    height: 120px;
+    padding: 1%;
+}
+#foot_len{
+
+}
+#foot_mih{
+
+}
+#foot_len ul{
+    font-size: 16px;
+}
+
+#foot_mih ul{
+   font-size: 16px;
+}
+footer li{
+    font-size: 14px;
+}
+footer a{
+
+}
+} 
+
+/*--------------*/
+
+@media (min-width: 300px) and (max-width: 400px){
+footer{
+    height: 160px;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#foot_len{
+width: 100%;
+    padding-left: 2%;
+}
+#foot_mih{
+width: 100%;
+    padding-right: 2%;
+}
+#foot_len ul{
+    font-size: 11px;
+}
+
+#foot_mih ul{
+   font-size: 11px;
+}
+footer li{
+    font-size: 10px;
+    margin-top: 10%;
+}
+footer a{
+
+}
+} 
+
+/*--------------*/
+
+@media (min-width: 200px) and (max-width: 300px){
+footer{
+    height: 160px;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#foot_len{
+width: 100%;
+    padding-left: 2%;
+}
+#foot_mih{
+width: 100%;
+    padding-right: 2%;
+}
+#foot_len ul{
+    font-size: 11px;
+}
+
+#foot_mih ul{
+   font-size: 11px;
+}
+footer li{
+    font-size: 10px;
+    margin-top: 10%;
+}
+footer a{
+
+}
+} 
 
 
 
