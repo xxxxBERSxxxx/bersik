@@ -48,6 +48,7 @@
            background-image: url(img/1_1_1.png);
            background-size: cover;
            background-position: center; 
+            background-attachment: fixed;
             /*            background: linear-gradient(135deg, var(--dark-surface) 0%, var(--secondary) 100%);*/
             color: var(--text-primary);
             padding: 100px 0;
@@ -239,3 +240,41 @@
         .form-control::placeholder {
             color: var(--text-secondary);
         }
+
+#services{
+    background-image: url(img/1_3_1.png);
+   background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/*
+#online{
+    background-image: url(img/1_2_1.png);
+   background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  
+}
+*/
+#contact{
+      background-image: url(img/1_4_1.png);
+   background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
