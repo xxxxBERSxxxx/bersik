@@ -262,8 +262,80 @@
     background-attachment: fixed;  
 }
 
+/*стили формы отправки*/
 
+/* Form Styles */
+.bg-dark {
+    background-color: var(--dark-bg) !important;
+}
 
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.form-control, .form-select {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    color: var(--text-primary);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--dark-card);
+    border-color: var(--primary);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(78, 205, 196, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-check-input {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.form-check-label {
+    color: var(--text-secondary);
+}
+
+.alert {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    animation: slideDown 0.3s ease;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.15);
+    border-color: rgba(40, 167, 69, 0.3);
+    color: #a3d9b1;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Phone input styling */
+input[type="tel"] {
+    direction: ltr;
+    text-align: left;
+}
 
 
 
