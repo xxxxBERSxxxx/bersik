@@ -658,6 +658,77 @@
   }
 }
 </script>
+    
+<!-- форма отпраки   -->
+  
+ <!-- Form Submission Script -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    const formMessage = document.getElementById('formMessage');
+    
+    // Показываем загрузку
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Отправка...';
+    submitBtn.disabled = true;
+    formMessage.innerHTML = '';
+    formMessage.className = 'mt-3 text-center';
+    
+    // Собираем данные формы
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Здесь должен быть ваш реальный endpoint для отправки формы
+    // Вместо этого примера используйте реальный сервер или сервис
+    const endpoint = 'https://your-server.com/send-form'; // Замените на ваш URL
+    
+    // Имитация отправки (для демонстрации)
+    setTimeout(() => {
+        // В реальном проекте используйте fetch:
+        // fetch(endpoint, {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(data)
+        // })
+        // .then(response => response.json())
+        // .then(result => {
+        //     // Обработка ответа
+        // });
+        
+        // Демо-успех
+        formMessage.innerHTML = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <strong>Спасибо!</strong> Ваша заявка отправлена. Мы свяжемся с вами в течение часа.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        `;
+        
+        // Сброс формы
+        document.getElementById('contactForm').reset();
+        
+        // Восстанавливаем кнопку
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        
+        // Автоматически скрыть сообщение через 10 секунд
+        setTimeout(() => {
+            const alert = document.querySelector('.alert');
+            if (alert) {
+                alert.classList.remove('show');
+                setTimeout(() => alert.remove(), 150);
+            }
+        }, 10000);
+        
+    }, 1500); // Задержка для демонстрации
+});
+</script>
+    
+<!-- ---------------   -->
+    
+    
     <!-- JS -->
      <script src="index.js"></script>
 </body>
