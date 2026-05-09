@@ -1,0 +1,486 @@
+/* Navbar.module.css - Apple Liquid Glass Theme (Fixed) */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 3rem;
+  background: rgba(0, 0, 0);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nav.scrolled {
+  padding: 0.5rem 3rem;
+  background: rgba(0, 0, 0);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 8px 50px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(100, 130, 255, 0.05);
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.logoLink:hover {
+  transform: scale(1.02);
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.logoAccent {
+  background: linear-gradient(
+    135deg,
+    #a0a0ff 0%,
+    #ffffff 30%,
+    #80c0ff 60%,
+    #c0c0ff 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: logoShimmer 4s ease-in-out infinite;
+}
+
+.logoDot {
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-left: 4px;
+  box-shadow: 
+    0 0 6px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(120, 140, 255, 0.6),
+    0 0 20px rgba(120, 140, 255, 0.4);
+  animation: logoDotPulse 2s ease-in-out infinite;
+}
+
+/* Контейнер ссылок на десктопе */
+.links {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 0.35rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Стили ссылок */
+.link {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 0.45rem 1rem;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: 0.2px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Стеклянный эффект при наведении */
+.link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.link:hover::before {
+  opacity: 1;
+}
+
+/* Индикатор под ссылкой */
+.linkIndicator {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #a0b8ff, #ffffff, #a0b8ff, transparent);
+  transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(140, 160, 255, 0.6);
+}
+
+.link:hover .linkIndicator {
+  width: 60%;
+}
+
+/* Активная ссылка - стеклянная капсула */
+.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.active::before {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(140, 160, 255, 0.1);
+}
+
+.active .linkIndicator {
+  width: 60%;
+  background: linear-gradient(90deg, transparent, #ffffff, #c0d0ff, transparent);
+  box-shadow: 0 0 15px rgba(180, 200, 255, 0.8);
+}
+
+/* Бургер-кнопка - стеклянная */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  cursor: pointer;
+  padding: 8px;
+  gap: 5px;
+  z-index: 1100;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.burger:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    0 0 20px rgba(140, 160, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 0 0 6px rgba(180, 200, 255, 0.4);
+}
+
+/* Анимация бургера в крестик */
+.burger.open {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.burger.open span {
+  background: #ffffff;
+}
+
+.burger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  width: 22px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.burger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  width: 22px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .nav.scrolled {
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .logoText {
+    font-size: 1.3rem;
+  }
+  
+  /* Показываем бургер */
+  .burger {
+    display: flex;
+  }
+  
+  /* Мобильное меню - НЕПРОЗРАЧНОЕ */
+  .links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: 300px;
+    flex-direction: column;
+    background: #0a0a14; /* Полностью непрозрачный фон */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    padding: 0;
+    gap: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    z-index: 1050;
+    overflow-y: auto;
+    box-shadow: 
+      -4px 0 40px rgba(0, 0, 0, 0.5),
+      -1px 0 0 rgba(255, 255, 255, 0.05) inset;
+  }
+  
+  .links.open {
+    transform: translateX(0);
+  }
+  
+  /* Шапка мобильного меню */
+  .menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.08); */
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  .menuLogo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(
+      135deg,
+      #a0a0ff 0%,
+      #ffffff 30%,
+      #80c0ff 60%,
+      #c0c0ff 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'SF Pro Display', 'Inter', sans-serif;
+    animation: logoShimmer 4s ease-in-out infinite;
+  }
+  
+  /* Кнопка закрытия (крестик) */
+  .closeBtn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.9);
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 
+      0 4px 12px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    z-index: 1100;
+  }
+  
+  .closeBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 6px 20px rgba(0, 0, 0, 0.2),
+      0 0 15px rgba(140, 160, 255, 0.15);
+  }
+  
+  /* Ссылки в мобильном меню */
+  .link {
+    width: 100%;
+    border-radius: 0;
+    padding: 0.95rem 1.5rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .link::before {
+    display: none;
+  }
+  
+  .link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border-left-color: rgba(255, 255, 255, 0.4);
+    text-shadow: none;
+  }
+  
+  .active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff !important;
+    border-left-color: #a0b8ff;
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 0 20px rgba(140, 160, 255, 0.05);
+    font-weight: 600;
+  }
+  
+  .linkIndicator {
+    display: none;
+  }
+  
+  /* Подвал мобильного меню */
+  .menuFooter {
+    margin-top: auto;
+    padding: 1rem;
+    /* border-top: 1px solid rgba(255, 255, 255, 0.08); */
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  .menuTag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'SF Pro Display', 'Inter', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+/* Десктопная версия */
+@media (min-width: 769px) {
+  .menuHeader,
+  .menuFooter,
+  .closeBtn {
+    display: none;
+  }
+}
+
+/* Анимации */
+@keyframes logoShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes logoDotPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 6px rgba(255, 255, 255, 0.8),
+      0 0 12px rgba(120, 140, 255, 0.6),
+      0 0 20px rgba(120, 140, 255, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px rgba(255, 255, 255, 1),
+      0 0 20px rgba(140, 160, 255, 0.9),
+      0 0 35px rgba(140, 160, 255, 0.6);
+    transform: scale(1.3);
+  }
+}
+
+/* Кастомный скроллбар для мобильного меню */
+.links::-webkit-scrollbar {
+  width: 4px;
+}
+
+.links::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.links::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.links::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Оверлей при открытом меню */
+@media (max-width: 768px) {
+  .links.open::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,366 @@
+/* ResultSection.module.css - Apple Liquid Glass Theme */
+
+.results {
+  position: relative;
+  padding: 5rem 2rem;
+  background: #000000;
+  overflow: hidden;
+}
+
+.resultsBg {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: 
+    radial-gradient(ellipse at 50% 40%, rgba(255, 140, 66, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 70%, rgba(255, 180, 100, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  animation: resultsBgPulse 10s ease-in-out infinite alternate;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0.6rem 1.4rem;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+  text-transform: uppercase;
+  animation: liquidShimmer 4s ease-in-out infinite;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 6px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(255, 160, 80, 0.6),
+    0 0 20px rgba(255, 160, 80, 0.4);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.highlight {
+  background: linear-gradient(
+    135deg, 
+    #ffa860 0%, 
+    #ffffff 30%, 
+    #ffcc80 60%, 
+    #ffe0b0 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 1rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.sectionUnderline {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffb880, #ffffff, #ffb880, transparent);
+  margin: 1.5rem auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(255, 160, 80, 0.4);
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.resultCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 24px;
+  padding: 1.5rem;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.resultCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transform: skewX(-15deg);
+  transition: left 0.8s ease;
+  pointer-events: none;
+}
+
+.resultCard:hover::after {
+  left: 150%;
+}
+
+.resultCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(255, 160, 80, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 160, 80, 0.06), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.cardIcon {
+  font-size: 2.2rem;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.06));
+}
+
+.resultCard:hover .cardIcon {
+  transform: scale(1.15);
+}
+
+.cardNumber {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.cardTech {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 40px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cardBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffb080, #ffffff, #ffb080);
+  transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.resultCard:hover .cardBorder {
+  width: 100%;
+}
+
+/* CTA Banner */
+.ctaBanner {
+  position: relative;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.4s ease;
+}
+
+.ctaBanner:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 16px 50px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(255, 160, 80, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.ctaBannerGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 160, 80, 0.04), transparent 60%);
+  pointer-events: none;
+}
+
+.ctaBannerContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  z-index: 1;
+}
+
+.ctaBannerIcon {
+  font-size: 2rem;
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.ctaBannerText {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  flex: 1;
+}
+
+.ctaBannerBtn {
+  background: linear-gradient(135deg, #ff7e3d, #ff9a5c);
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  box-shadow: 
+    0 8px 25px rgba(255, 140, 66, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ctaBannerBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 16px 40px rgba(255, 140, 66, 0.35),
+    0 0 30px rgba(255, 160, 100, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Анимации */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 160, 80, 0.6), 0 0 20px rgba(255, 160, 80, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 180, 100, 0.9), 0 0 35px rgba(255, 180, 100, 0.6);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes liquidShimmer {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.12); }
+  50% { border-color: rgba(255, 255, 255, 0.25); }
+}
+
+@keyframes resultsBgPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 768px) {
+  .results { padding: 3rem 1.5rem; }
+  .sectionTitle { font-size: 1.5rem; }
+  .sectionSubtitle { font-size: 0.95rem; }
+  .resultsGrid { grid-template-columns: 1fr; }
+  .resultCard { padding: 1.2rem; }
+  .cardIcon { font-size: 1.8rem; }
+  .ctaBanner { padding: 1.5rem; }
+  .ctaBannerText { font-size: 0.95rem; text-align: center; }
+  .ctaBannerContent { flex-direction: column; text-align: center; }
+  .ctaBannerBtn { width: 100%; text-align: center; justify-content: center; }
+}

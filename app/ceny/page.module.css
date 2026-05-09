@@ -1,0 +1,634 @@
+/* PriceSection.module.css - Apple Liquid Glass Theme */
+
+.section {
+  position: relative;
+  padding: 6rem 2rem;
+  background: transparent;
+  overflow: hidden;
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* Заголовок */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 0.6rem 1.4rem;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  text-transform: uppercase;
+  animation: liquidShimmer 4s ease-in-out infinite;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(120, 140, 255, 0.7),
+    0 0 24px rgba(120, 140, 255, 0.5);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+}
+
+.titleGradient {
+  background: linear-gradient(135deg, #a0a0ff 0%, #ffffff 30%, #80c0ff 60%, #c0c0ff 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.freeBadge {
+  font-size: 0.8rem;
+  color: #e03131;
+  margin-bottom: 1.5rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  text-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
+}
+
+.freeBadge strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.underline {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #a0b8ff, #ffffff, #a0b8ff, transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(140, 160, 255, 0.4);
+}
+
+/* Категории */
+.categorySection {
+  margin-bottom: 4rem;
+    text-align: center;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.categoryIcon {
+  font-size: 1.5rem;
+}
+
+.categoryTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Сетки */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Карточка цены */
+.priceCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.priceCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transform: skewX(-15deg);
+  transition: left 0.8s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.priceCard:hover::after {
+  left: 150%;
+}
+
+.priceCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.3),
+    0 0 50px rgba(120, 140, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Популярная карточка */
+.priceCard.popular {
+  border-color: rgba(120, 160, 255, 0.25);
+  background: rgba(120, 140, 255, 0.06);
+  box-shadow: 
+    0 8px 40px rgba(100, 140, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.popularBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #6e6eff, #4a90ff);
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  box-shadow: 0 4px 15px rgba(100, 100, 255, 0.3);
+  z-index: 10;
+}
+
+.saleBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #ff6b6b, #ff3d3d);
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  box-shadow: 0 4px 15px rgba(255, 80, 80, 0.3);
+  z-index: 10;
+}
+
+.cardGlow {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(140, 160, 255, 0.06), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+  flex: 1;
+}
+
+.cardIcon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.priceBlock {
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.price {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff, #a0c8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.pricePer {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+.duration {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 1.25rem;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.4;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.checkIcon {
+  color: #80ff80;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  text-shadow: 0 0 8px rgba(128, 255, 128, 0.4);
+}
+
+.actionBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #6e6eff, #4a90ff);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 
+    0 8px 25px rgba(100, 100, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 2;
+  margin-top: auto;
+}
+
+.actionBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 16px 40px rgba(100, 100, 255, 0.35),
+    0 0 30px rgba(100, 150, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btnArrow {
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.actionBtn:hover .btnArrow {
+  transform: translateX(4px);
+}
+
+.btnGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.actionBtn:hover .btnGlow {
+  opacity: 1;
+  animation: btnShine 2s ease-in-out infinite;
+}
+
+/* Информационная секция */
+.infoSection {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.infoCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.infoTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+}
+
+.infoItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.infoIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.infoText {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+/* CTA Banner */
+.ctaBanner {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.4s ease;
+}
+
+.ctaBanner:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 16px 50px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(120, 140, 255, 0.05);
+}
+
+.ctaGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(140, 160, 255, 0.04), transparent 60%);
+  pointer-events: none;
+}
+
+.ctaContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.ctaEmoji {
+  font-size: 2.5rem;
+}
+
+.ctaTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.ctaText {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.ctaBtn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #6e6eff, #4a90ff);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.4s ease;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  box-shadow: 0 8px 25px rgba(100, 100, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(100, 100, 255, 0.35);
+}
+
+/* Анимации */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 16px rgba(120, 140, 255, 0.7), 0 0 24px rgba(120, 140, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 1), 0 0 24px rgba(140, 160, 255, 1), 0 0 36px rgba(140, 160, 255, 0.8);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes liquidShimmer {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.12); }
+  50% { border-color: rgba(255, 255, 255, 0.25); }
+}
+
+@keyframes btnShine {
+  0%, 100% { opacity: 0.3; transform: rotate(0deg); }
+  50% { opacity: 0.7; transform: rotate(10deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+  }
+  
+  .categoryTitle {
+    font-size: 1.2rem;
+  }
+  
+  .price {
+    font-size: 1.6rem;
+  }
+  
+  .ctaContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ctaBtn {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+  
+  .priceCard {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+  }
+}
