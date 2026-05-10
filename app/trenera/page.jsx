@@ -36,7 +36,7 @@ export default function TrainersSection() {
         { value: "98%", label: "Результат" }
       ],
       specialties: ["Оздоровительный фитнес", "Реабилитация", "Работа с женщинами", "ЛФК"],
-      link: "/trenera/elena"
+      link: "/trenera"
     }
   ];
 
