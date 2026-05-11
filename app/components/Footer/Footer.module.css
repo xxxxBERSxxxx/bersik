@@ -1,0 +1,250 @@
+/* Footer.module.css - Apple Liquid Glass Theme */
+
+.footer {
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.footerGlow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(140, 160, 255, 0.3), transparent);
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+  z-index: 2;
+}
+
+/* Социальные сети */
+.socialSection {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 2.5rem;
+}
+
+.socialTitle {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.socialCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.socialCard:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 30px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(120, 140, 255, 0.05);
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+
+.socialCard:hover .socialIcon {
+  transform: scale(1.2);
+}
+
+.socialInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.socialLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.socialDesc {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.socialArrow {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover .socialArrow {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* Нижняя часть */
+.bottom {
+  text-align: center;
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bottomLink {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.bottomLink:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bottomDivider {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 0.7rem;
+}
+
+.madeWith {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 1.5s ease infinite;
+  color: #ff6b6b;
+}
+
+/* Анимации */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.2); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+  60% { transform: scale(1); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  .socialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bottomLinks {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2.5rem 1rem 1rem;
+  }
+
+  .socialGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .socialCard {
+    padding: 0.85rem 1rem;
+  }
+
+  .socialTitle {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+
+  .socialLabel {
+    font-size: 0.75rem;
+  }
+
+  .socialDesc {
+    font-size: 0.6rem;
+  }
+
+  .copyright,
+  .bottomLink,
+  .madeWith {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 2rem 0.75rem 0.75rem;
+  }
+
+  .socialCard {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .bottomLinks {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .bottomDivider {
+    display: none;
+  }
+}

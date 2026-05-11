@@ -1,0 +1,654 @@
+/* ContactForm.module.css - Apple Liquid Glass Theme */
+
+.section {
+  position: relative;
+  padding: 6rem 2rem;
+  background: transparent;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* Заголовок */
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 0.6rem 1.4rem;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  text-transform: uppercase;
+  animation: liquidShimmer 4s ease-in-out infinite;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(120, 140, 255, 0.7),
+    0 0 24px rgba(120, 140, 255, 0.5);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+}
+
+.titleGradient {
+  background: linear-gradient(135deg, #a0a0ff 0%, #ffffff 30%, #80c0ff 60%, #c0c0ff 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.underline {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #a0b8ff, #ffffff, #a0b8ff, transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(140, 160, 255, 0.4);
+}
+
+/* Карточка формы */
+.formCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 28px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  margin-bottom: 2rem;
+}
+
+.cardGlow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(140, 160, 255, 0.06), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.form {
+  position: relative;
+  z-index: 2;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+/* Поле ввода */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.labelIcon {
+  font-size: 1rem;
+}
+
+.inputWrapper,
+.selectWrapper {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.inputWrapper:focus-within,
+.selectWrapper:focus-within {
+  transform: translateY(-1px);
+}
+
+.inputWrapper.inputError,
+.selectWrapper.inputError {
+  animation: shake 0.5s ease;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input:hover,
+.select:hover,
+.textarea:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: rgba(140, 160, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 25px rgba(140, 160, 255, 0.1),
+    0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.inputError .input,
+.inputError .select {
+  border-color: rgba(255, 100, 100, 0.5);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 100, 100, 0.05),
+    0 0 15px rgba(255, 80, 80, 0.1);
+}
+
+/* Select */
+.selectWrapper {
+  position: relative;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.select:focus + .selectArrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select option {
+  background: #1a1a2e;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+/* Textarea */
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+/* Ошибки */
+.errorText {
+  font-size: 0.75rem;
+  color: #ff6b6b;
+  font-weight: 500;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  padding-left: 0.25rem;
+}
+
+/* Согласие */
+.agreement {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1rem;
+}
+
+.checkmark::after {
+  content: '';
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg) scale(0);
+  transition: transform 0.2s ease;
+}
+
+.checkbox:checked + .checkmark {
+  background: rgba(120, 160, 255, 0.2);
+  border-color: rgba(140, 180, 255, 0.5);
+  box-shadow: 0 0 15px rgba(120, 160, 255, 0.15);
+}
+
+.checkbox:checked + .checkmark::after {
+  transform: rotate(-45deg) scale(1);
+}
+
+.agreementText {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.4;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.agreementLink {
+  color: #80b8ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.agreementLink:hover {
+  color: #a0d0ff;
+  text-decoration: underline;
+}
+
+/* Кнопка отправки */
+.submitBtn {
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #6e6eff, #4a90ff);
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 
+    0 8px 32px rgba(100, 100, 255, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 20px 50px rgba(100, 100, 255, 0.4),
+    0 0 40px rgba(100, 150, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitArrow {
+  transition: transform 0.4s ease;
+}
+
+.submitBtn:hover:not(:disabled) .submitArrow {
+  transform: translateX(4px);
+}
+
+.btnGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.submitBtn:hover:not(:disabled) .btnGlow {
+  opacity: 1;
+  animation: btnShine 2s ease-in-out infinite;
+}
+
+/* Спиннер */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Информационная строка */
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.infoIcon {
+  font-size: 1rem;
+}
+
+.infoText {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.infoDivider {
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+/* Карточка успеха */
+.successCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 28px;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(120, 180, 255, 0.15);
+  overflow: hidden;
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(120, 180, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.successContent {
+  position: relative;
+  z-index: 2;
+}
+
+.successEmoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: bounce 1s ease infinite;
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.successText {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.resetBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+.resetBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Анимации */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 16px rgba(120, 140, 255, 0.7), 0 0 24px rgba(120, 140, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 1), 0 0 24px rgba(140, 160, 255, 1), 0 0 36px rgba(140, 160, 255, 0.8);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes liquidShimmer {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.12); }
+  50% { border-color: rgba(255, 255, 255, 0.25); }
+}
+
+@keyframes btnShine {
+  0%, 100% { opacity: 0.3; transform: rotate(0deg); }
+  50% { opacity: 0.7; transform: rotate(10deg); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .formCard {
+    padding: 1.5rem;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .infoRow {
+    gap: 0.75rem;
+  }
+
+  .infoText {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 0.75rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .formCard {
+    padding: 1.25rem;
+    border-radius: 22px;
+  }
+
+  .input,
+  .select,
+  .textarea {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.85rem;
+    border-radius: 12px;
+  }
+
+  .submitBtn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .infoRow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .infoDivider {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .section {
+    padding: 2.5rem 0.5rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .formCard {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .input,
+  .select,
+  .textarea {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}

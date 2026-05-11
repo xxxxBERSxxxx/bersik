@@ -5,7 +5,8 @@ import CTA from './components/sections/CTA/CTA';
 import OnlyneTren from './components/sections/OnlyneTren/OnlyneTren';
 import ContactSection from './contacts/page';
 import Trenera from './trenera/page';
-
+import ContactForm from './components/ContactForm/ContactForm';
+import Footer from './components/Footer/Footer';
 
 // Метаданные главной страницы переопределяют default из layout
 export const metadata = {
@@ -23,6 +24,8 @@ export default function Home() {
       <CTA />
       <OnlyneTren />
       <ContactSection />
+      <ContactForm />
+      <Footer />
     </>
   );
 }
