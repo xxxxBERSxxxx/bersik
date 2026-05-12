@@ -18,13 +18,13 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <MapSection />
       <Trenera />
       <Features />
       <CTA />
       <OnlyneTren />
       <ContactSection />
       <ContactForm />
+      <MapSection />
       <Footer />
     </>
   );
