@@ -5,9 +5,9 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://ваш-сайт.ru/sitemap.xml`;
+Sitemap: https://bersik.ru/sitemap.xml`;
 
   return new Response(robots, {
-    headers: { 'Content-Type': 'text/plain' }
+    headers: { "Content-Type": "text/plain" },
   });
 }
