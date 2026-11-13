@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from './page.module.css';
-import mikhailPhoto from '../../public/Misha/1.png';
-import elenaPhoto from '../../public/Lena/1.jpg';
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./page.module.css";
+import mikhailPhoto from "../../public/Misha/1.png";
+import elenaPhoto from "../../public/Lena/1.jpg";
 
 export default function TrainersSection() {
   const trainers = [
@@ -10,34 +10,46 @@ export default function TrainersSection() {
       id: 1,
       name: "Михаил Соловьев",
       title: "Специалист по силовому и функциональному тренингу",
-      description: "Сертифицированный тренер с 8-летним опытом. Помогает достичь максимальных результатов в силовых тренировках, строит программы под любые цели — от набора массы до сушки.",
+      description:
+        "Сертифицированный тренер с 8-летним опытом. Помогает достичь максимальных результатов в силовых тренировках, строит программы под любые цели — от набора массы до сушки.",
       photo: mikhailPhoto,
       gradient: "blue",
       badge: "Power & Performance",
       stats: [
         { value: "20 лет", label: "Опыта" },
         { value: "500+", label: "Клиентов" },
-        { value: "94%", label: "Результат" }
+        { value: "94%", label: "Результат" },
       ],
-      specialties: ["Силовой тренинг", "Функциональный тренинг", "ОФП", "Сушка тела"],
-      link: "https://spiritfit.ru/coaches/solovyev-mikhail/"
+      specialties: [
+        "Силовой тренинг",
+        "Функциональный тренинг",
+        "ОФП",
+        "Сушка тела",
+      ],
+      link: "https://spiritfit.ru/coaches/solovev-mikhail/",
     },
     {
       id: 2,
       name: "Елена Петухова",
       title: "Эксперт по оздоровительному фитнесу и реабилитации",
-      description: "Специалист по восстановительным практикам и работе с особыми потребностями. Индивидуальный подход к каждому клиенту, помогающий вернуть здоровье и уверенность в себе.",
+      description:
+        "Специалист по восстановительным практикам и работе с особыми потребностями. Индивидуальный подход к каждому клиенту, помогающий вернуть здоровье и уверенность в себе.",
       photo: elenaPhoto,
       gradient: "purple",
       badge: "Wellness & Recovery",
       stats: [
         { value: "30 лет", label: "Опыта" },
         { value: "700+", label: "Клиентов" },
-        { value: "98%", label: "Результат" }
+        { value: "98%", label: "Результат" },
       ],
-      specialties: ["Оздоровительный фитнес", "Реабилитация", "Работа с женщинами", "ЛФК"],
-      link: "/trenera"
-    }
+      specialties: [
+        "Оздоровительный фитнес",
+        "Реабилитация",
+        "Работа с женщинами",
+        "ЛФК",
+      ],
+      link: "/trenera",
+    },
   ];
 
   return (
@@ -50,17 +62,25 @@ export default function TrainersSection() {
           </div>
           <h2 id="trainers-heading" className={styles.title}>
             Знакомство с вашими&nbsp;
-            <span className={styles.titleGradient}> персональными тренерами</span>
+            <span className={styles.titleGradient}>
+              {" "}
+              персональными тренерами
+            </span>
           </h2>
           <p className={styles.subtitle}>
-            Профессионалы с многолетним опытом, готовые привести вас к результату
+            Профессионалы с многолетним опытом, готовые привести вас к
+            результату
           </p>
           <div className={styles.underline}></div>
         </div>
 
         <div className={styles.grid}>
           {trainers.map((trainer) => (
-            <article key={trainer.id} className={`${styles.card} ${styles[trainer.gradient]}`} aria-label={`Тренер ${trainer.name}`}>
+            <article
+              key={trainer.id}
+              className={`${styles.card} ${styles[trainer.gradient]}`}
+              aria-label={`Тренер ${trainer.name}`}
+            >
               <div className={styles.cardGlow}></div>
               <div className={styles.cardGlowSecondary}></div>
               <div className={styles.cardTop}>
@@ -78,7 +98,7 @@ export default function TrainersSection() {
                   </div>
                   <span className={styles.onlineDot}></span>
                 </div>
-                
+
                 <div className={styles.badgeRow}>
                   <span className={styles.badge}>{trainer.badge}</span>
                 </div>
@@ -100,7 +120,9 @@ export default function TrainersSection() {
 
               <div className={styles.specialties}>
                 {trainer.specialties.map((spec, idx) => (
-                  <span key={idx} className={styles.specTag}>{spec}</span>
+                  <span key={idx} className={styles.specTag}>
+                    {spec}
+                  </span>
                 ))}
               </div>
 
