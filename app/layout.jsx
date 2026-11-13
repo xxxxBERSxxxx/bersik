@@ -1,20 +1,32 @@
-import Navbar from './components/Navbar';  
-import './globals.css';
-import Script from 'next/script';
+import Navbar from "./components/Navbar";
+import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   title: {
-    template: '%s | Фитнес Тренеры Одинцово',
-    default: 'Персональный Фитнес в Одинцово и Москве | Тренеры Михаил и Елена',
+    template: "%s | Фитнес Тренеры Москва метро Савеловская",
+    default:
+      "Персональный Фитнес в Москве возле метро Савеловская | Тренеры Михаил и Елена",
   },
-  description: 'Профессиональные фитнес-тренеры в Одинцово и Москве. Персональные тренировки, реабилитация, ЛФК, онлайн-занятия. Первая консультация бесплатно. Запишитесь!',
-  keywords: ['фитнес', 'персональный тренер', 'Одинцово', 'Москва', 'тренировки', 'реабилитация', 'ЛФК'],
+  description:
+    "Профессиональные фитнес-тренеры в Москве (метро Савеловская). Персональные тренировки, реабилитация, ЛФК, онлайн-занятия. Первая консультация бесплатно. Запишитесь!",
+  keywords: [
+    "фитнес",
+    "персональный тренер",
+    "метро Савеловская",
+    "Савеловский вокзал",
+    "Москва",
+    "тренировки",
+    "реабилитация",
+    "ЛФК",
+  ],
   openGraph: {
-    title: 'Персональные Фитнес-Тренеры в Одинцово',
-    description: 'Достигните своих целей с персональными тренировками от Михаила и Елены.',
-    siteName: 'Фитнес Тренеры Одинцово',
-    locale: 'ru_RU',
-    type: 'website',
+    title: "Персональные Фитнес-Тренеры в Москве (метро Савеловская)",
+    description:
+      "Достигните своих целей с персональными тренировками от Михаила и Елены.",
+    siteName: "Фитнес Тренеры Москвы (метро Савеловская)",
+    locale: "ru_RU",
+    type: "website",
   },
 };
 
@@ -22,28 +34,30 @@ export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Фитнес Тренеры Одинцово",
-    "description": "Персональные тренировки, реабилитация, ЛФК в Одинцово",
-    "address": {
+    name: "Фитнес Тренеры в Москве (метро Савеловская)",
+    description:
+      "Персональные тренировки, реабилитация, ЛФК в Москве метро Савеловская",
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Одинцово",
-      "addressRegion": "Московская область"
+      addressLocality: "Москва",
+      addressRegion: "Московская область",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": "55.677037",
-      "longitude": "37.281953"
+      latitude: "55.796647",
+      longitude: "37.595180",
     },
-    "telephone": "+7-903-874-18-98",
-    "priceRange": "от 1500 ₽",
-    "openingHoursSpecification": [
+
+    telephone: "+7-903-874-18-98",
+    priceRange: "от 3000 ₽",
+    openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:00",
-        "closes": "22:00"
-      }
-    ]
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "07:00",
+        closes: "22:00",
+      },
+    ],
   };
 
   return (
@@ -57,7 +71,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main>{children}</main>
-        
+
         {/* Яндекс.Метрика */}
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
@@ -75,14 +89,14 @@ export default function RootLayout({ children }) {
             });
           `}
         </Script>
-        
+
         {/* Noscript для пользователей без JavaScript */}
         <noscript>
           <div>
-            <img 
-              src="https://mc.yandex.ru/watch/106095632" 
-              style={{position:'absolute', left:'-9999px'}} 
-              alt="" 
+            <img
+              src="https://mc.yandex.ru/watch/106095632"
+              style={{ position: "absolute", left: "-9999px" }}
+              alt=""
             />
           </div>
         </noscript>

@@ -11,6 +11,18 @@ export default function ContactSection() {
 
   const trainers = [
     {
+      name: "Михаил Соловьев",
+      spec: "Силовой тренинг | Функциональный тренинг | ОФП",
+      specShort: "Power & Performance",
+      whatsapp: "+7-999-606-26-16",
+      telegram: "+7-999-606-26-16",
+      vk: "vk.com/xxxxbersxxxx",
+      photo: Mih,
+      photoPlaceholder:
+        "https://placehold.co/400x400/0f151c/00ffff?text=Михаил",
+      gradient: "gradient2",
+    },
+    {
       name: "Елена Петухова",
       spec: "Оздоровительный фитнес | Реабилитация | Работа с женщинами",
       specShort: "Wellness & Recovery",
@@ -22,18 +34,6 @@ export default function ContactSection() {
       // Альтернативный URL (если фото еще нет)
       photoPlaceholder: "https://placehold.co/400x400/0f151c/00ffff?text=Елена",
       gradient: "gradient1",
-    },
-    {
-      name: "Михаил Соловьев",
-      spec: "Силовой тренинг | Функциональный тренинг | ОФП",
-      specShort: "Power & Performance",
-      whatsapp: "+7-999-606-26-16",
-      telegram: "+7-999-606-26-16",
-      vk: "vk.com/xxxxbersxxxx",
-      photo: Mih,
-      photoPlaceholder:
-        "https://placehold.co/400x400/0f151c/00ffff?text=Михаил",
-      gradient: "gradient2",
     },
   ];
 

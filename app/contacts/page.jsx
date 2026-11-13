@@ -1,16 +1,29 @@
-'use client';
-import styles from './page.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import lena from '../../public/Lena/1.jpg';
-import Mih from '../../public/Misha/1.png';
-
+"use client";
+import styles from "./page.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import lena from "../../public/Lena/1.jpg";
+import Mih from "../../public/Misha/1.png";
 
 export default function ContactSection() {
   const [imageErrors, setImageErrors] = useState({});
 
   const trainers = [
+    {
+      name: "Михаил Соловьев",
+      spec: "Силовой тренинг | Функциональный тренинг | ОФП",
+      specShort: "Power & Performance",
+      phone: "+7 (999) 606-26-16",
+      phoneRaw: "+79996062616",
+      whatsapp: "+7-999-606-26-16",
+      telegram: "+7-999-606-26-16",
+      vk: "vk.com/xxxxbersxxxx",
+      photo: Mih,
+      photoPlaceholder:
+        "https://placehold.co/400x400/0f151c/00ffff?text=Михаил",
+      gradient: "gradient2",
+    },
     {
       name: "Елена Петухова",
       spec: "Оздоровительный фитнес | Реабилитация | Работа с женщинами",
@@ -22,25 +35,12 @@ export default function ContactSection() {
       vk: "vk.com/id222603101",
       photo: lena,
       photoPlaceholder: "https://placehold.co/400x400/0f151c/00ffff?text=Елена",
-      gradient: "gradient1"
+      gradient: "gradient1",
     },
-    {
-      name: "Михаил Соловьев",
-      spec: "Силовой тренинг | Функциональный тренинг | ОФП",
-      specShort: "Power & Performance",
-      phone: "+7 (999) 606-26-16",
-      phoneRaw: "+79996062616",
-      whatsapp: "+7-999-606-26-16",
-      telegram: "+7-999-606-26-16",
-      vk: "vk.com/xxxxbersxxxx",
-      photo: Mih,
-      photoPlaceholder: "https://placehold.co/400x400/0f151c/00ffff?text=Михаил",
-      gradient: "gradient2"
-    }
   ];
 
   const handleImageError = (trainerName) => {
-    setImageErrors(prev => ({ ...prev, [trainerName]: true }));
+    setImageErrors((prev) => ({ ...prev, [trainerName]: true }));
   };
 
   return (
@@ -64,9 +64,12 @@ export default function ContactSection() {
 
         <div className={styles.trainersGrid}>
           {trainers.map((trainer, index) => (
-            <div key={index} className={`${styles.trainerCard} ${styles[trainer.gradient]}`}>
+            <div
+              key={index}
+              className={`${styles.trainerCard} ${styles[trainer.gradient]}`}
+            >
               <div className={styles.cardGlow}></div>
-              
+
               <div className={styles.cardHeader}>
                 <div className={styles.trainerPhoto}>
                   {!imageErrors[trainer.name] ? (
@@ -97,7 +100,7 @@ export default function ContactSection() {
               <p className={styles.trainerDesc}>{trainer.spec}</p>
 
               {/* Телефон */}
-              <a 
+              <a
                 href={`tel:${trainer.phoneRaw}`}
                 className={styles.contactPhone}
               >
@@ -110,8 +113,8 @@ export default function ContactSection() {
               </a>
 
               <div className={styles.contactLinks}>
-                <a 
-                  href={`https://wa.me/${trainer.whatsapp.replace(/[^0-9]/g, '')}`}
+                <a
+                  href={`https://wa.me/${trainer.whatsapp.replace(/[^0-9]/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.contactItem}
@@ -119,13 +122,15 @@ export default function ContactSection() {
                   <span className={styles.contactIcon}>💬</span>
                   <div className={styles.contactInfo}>
                     <span className={styles.contactLabel}>WhatsApp</span>
-                    <span className={styles.contactValue}>{trainer.whatsapp}</span>
+                    <span className={styles.contactValue}>
+                      {trainer.whatsapp}
+                    </span>
                   </div>
                   <span className={styles.contactArrow}>→</span>
                 </a>
 
-                <a 
-                  href={`https://t.me/${trainer.telegram.replace(/[^0-9]/g, '')}`}
+                <a
+                  href={`https://t.me/${trainer.telegram.replace(/[^0-9]/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.contactItem}
@@ -133,12 +138,14 @@ export default function ContactSection() {
                   <span className={styles.contactIcon}>✈️</span>
                   <div className={styles.contactInfo}>
                     <span className={styles.contactLabel}>Telegram</span>
-                    <span className={styles.contactValue}>{trainer.telegram}</span>
+                    <span className={styles.contactValue}>
+                      {trainer.telegram}
+                    </span>
                   </div>
                   <span className={styles.contactArrow}>→</span>
                 </a>
 
-                <a 
+                <a
                   href={`https://${trainer.vk}`}
                   target="_blank"
                   rel="noopener noreferrer"
