@@ -1,79 +1,78 @@
-
-import Link from 'next/link';
-import styles from './page.module.css';
+import Link from "next/link";
+import styles from "./page.module.css";
 
 export default function PriceSection() {
   const personalTraining = [
     {
       title: "Разовое занятие",
-      price: "3000 ₽",
+      price: "4000 ₽",
       duration: "60 минут",
       features: [
         "Индивидуальная тренировка",
         "Анализ текущей формы",
         "Коррекция техники выполнения",
-        "Рекомендации по питанию"
+        "Рекомендации по питанию",
       ],
-      popular: false
+      popular: false,
     },
     {
       title: "Пакет 5 занятий",
-      price: "13 500 ₽",
-      pricePer: "2 700 ₽ за занятие",
+      price: "18000 ₽",
+      pricePer: "3600 ₽ за занятие",
       duration: "5 тренировок",
       features: [
         "Индивидуальные тренировки",
         "Персональная программа",
         "Контроль питания и прогресса",
         "Корректировка программы",
-        "Поддержка между тренировками"
+        "Поддержка между тренировками",
       ],
-      popular: true
+      popular: true,
     },
     {
       title: "Пакет 10 занятий",
-      price: "25 000 ₽",
-      pricePer: "2 500 ₽ за занятие",
+      price: "34000 ₽",
+      pricePer: "3400 ₽ за занятие",
       duration: "10 тренировок",
       features: [
         "Полная диагностика организма",
         "Программа тренировок и питания",
         "Регулярные замеры прогресса",
         "Поддержка 24/7 в мессенджерах",
-        "Доступ к закрытой группе"
+        "Доступ к закрытой группе",
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const onlineTraining = [
     {
       title: "Разовое онлайн-занятие",
-      price: "1 500 ₽",
+      price: "2500 ₽",
       duration: "60 минут по видеосвязи",
       features: [
         "Проверка техники выполнения",
         "Рекомендации по домашним тренировкам",
-        "Подбор упражнений под оборудование"
+        "Подбор упражнений под оборудование",
       ],
-      badge: null
+      badge: null,
     },
     {
       title: "Месяц онлайн-тренировок",
-      price: "12 000 ₽",
+      price: "18000 ₽",
       pricePer: "8 занятий + поддержка",
       duration: "8 тренировок по 60 минут",
       features: [
         "Индивидуальная программа",
         "Консультации по питанию",
         "Еженедельный анализ прогресса",
-        "Поддержка в чате 24/7"
+        "Поддержка в чате 24/7",
       ],
-      badge: "ВЫГОДНО"
+      badge: "ВЫГОДНО",
     },
     {
       title: "Полное онлайн-ведение",
-      price: "18 000 ₽",
+      price: "25500 ₽",
       pricePer: "в месяц",
       duration: "12 онлайн-тренировок",
       features: [
@@ -81,78 +80,78 @@ export default function PriceSection() {
         "Ежедневный контроль питания",
         "Регулярные замеры и корректировки",
         "Поддержка 24/7",
-        "Доступ к обучающим материалам"
+        "Доступ к обучающим материалам",
       ],
-      badge: null
-    }
+      badge: null,
+    },
   ];
 
   const specializedServices = [
     {
       title: "Реабилитация после травм",
-      price: "3 500 ₽",
+      price: "4500 ₽",
       duration: "за занятие",
       features: [
         "Индивидуальная программа восстановления",
         "Методика Бубновского",
         "Работа с ограничениями ОДА",
         "Постепенное увеличение нагрузок",
-        "Консультация ортопеда"
+        "Консультация ортопеда",
       ],
-      icon: ""
+      icon: "",
     },
     {
       title: "Лечебная физкультура (ЛФК)",
-      price: "3 200 ₽",
+      price: "4200 ₽",
       duration: "за занятие",
       features: [
         "Индивидуальные занятия ЛФК",
         "Коррекция осанки",
         "Устранение болевых синдромов",
         "Укрепление мышечного корсета",
-        "Дыхательная гимнастика"
+        "Дыхательная гимнастика",
       ],
-      icon: ""
+      icon: "",
     },
     {
       title: "Функциональный тренинг",
-      price: "3 000 ₽",
+      price: "4000 ₽",
       duration: "за занятие",
       features: [
         "Тренировки для повседневной активности",
         "Улучшение координации и баланса",
         "Развитие силы и выносливости",
         "Работа с собственным весом",
-        "Подготовка к спортивным мероприятиям"
+        "Подготовка к спортивным мероприятиям",
       ],
-      icon: ""
-    }
+      icon: "",
+    },
   ];
 
   const additionalServices = [
     {
       title: "Составление программы тренировок",
-      price: "5 000 ₽",
+      price: "5000 ₽",
       features: [
         "Полный фитнес-тест",
         "Индивидуальная программа на 3 месяца",
         "Подробное описание упражнений",
         "Рекомендации по периодизации",
-        "Консультация по выполнению"
+        "Консультация по выполнению",
       ],
-      icon: ""
+      icon: "",
     },
     {
       title: "План питания",
-      price: "4 500 ₽",
+      price: "5000 ₽",
       features: [
         "Анализ текущего рациона",
         "Индивидуальный план питания",
         "Рекомендации по БЖУ",
         "Список продуктов и рецепты",
-        "Корректировка по показаниям"
+        "Корректировка по показаниям",
       ],
-      icon: ""
+      icon: "",
     },
     {
       title: "Комплексная программа",
@@ -162,10 +161,10 @@ export default function PriceSection() {
         "Индивидуальный план питания",
         "Рекомендации по добавкам",
         "Регулярные онлайн-консультации",
-        "Корректировка программ"
+        "Корректировка программ",
       ],
-      icon: ""
-    }
+      icon: "",
+    },
   ];
 
   const importantInfo = [
@@ -174,16 +173,19 @@ export default function PriceSection() {
     { text: "Отмена за 12 часов — бесплатно", icon: "⏰" },
     { text: "Скидки пенсионерам и студентам — 10%", icon: "👨‍🎓" },
     { text: "Семейные скидки — 15%", icon: "👨‍👩‍👧‍👦" },
-    { text: "Длительные программы — индивидуальные скидки", icon: "💎" }
+    { text: "Длительные программы — индивидуальные скидки", icon: "💎" },
   ];
 
   const renderPriceCard = (item, index, isPopular = false) => (
-    <div key={index} className={`${styles.priceCard} ${item.popular ? styles.popular : ''}`}>
+    <div
+      key={index}
+      className={`${styles.priceCard} ${item.popular ? styles.popular : ""}`}
+    >
       {item.popular && <div className={styles.popularBadge}>ПОПУЛЯРНЫЙ</div>}
       {item.badge && <div className={styles.saleBadge}>{item.badge}</div>}
-      
+
       <div className={styles.cardGlow}></div>
-      
+
       <div className={styles.cardHeader}>
         <h3 className={styles.cardTitle}>{item.title}</h3>
         {item.icon && <span className={styles.cardIcon}>{item.icon}</span>}
@@ -191,7 +193,9 @@ export default function PriceSection() {
 
       <div className={styles.priceBlock}>
         <span className={styles.price}>{item.price}</span>
-        {item.pricePer && <span className={styles.pricePer}>{item.pricePer}</span>}
+        {item.pricePer && (
+          <span className={styles.pricePer}>{item.pricePer}</span>
+        )}
         <span className={styles.duration}>{item.duration}</span>
       </div>
 
@@ -224,14 +228,16 @@ export default function PriceSection() {
             #PRICE_LIST
           </div>
           <h2 className={styles.title}>
-            Прайс-лист <br />  
-            <span className={styles.titleGradient}>         фитнес-услуг</span>
+            Прайс-лист <br />
+            <span className={styles.titleGradient}> фитнес-услуг</span>
           </h2>
           <p className={styles.subtitle}>
-            Соловьев Михаил и Петухова Елена — профессиональные тренеры в Одинцово и Москве
+            Соловьев Михаил и Петухова Елена — профессиональные тренеры в Москве
+            (метро Савеловская)
           </p>
           <p className={styles.freeBadge}>
-             Индивидуальный подход к каждому клиенту. <br />Первая консультация — <strong>бесплатно</strong>!
+            Индивидуальный подход к каждому клиенту. <br />
+            Первая консультация — <strong>бесплатно</strong>!
           </p>
           <div className={styles.underline}></div>
         </div>
@@ -240,10 +246,14 @@ export default function PriceSection() {
         <div className={styles.categorySection}>
           <div className={styles.categoryHeader}>
             <span className={styles.categoryIcon}>🏋️</span>
-            <h3 className={styles.categoryTitle}>Персональные тренировки (офлайн)</h3>
+            <h3 className={styles.categoryTitle}>
+              Персональные тренировки (офлайн)
+            </h3>
           </div>
           <div className={styles.grid3}>
-            {personalTraining.map((item, index) => renderPriceCard(item, index))}
+            {personalTraining.map((item, index) =>
+              renderPriceCard(item, index),
+            )}
           </div>
         </div>
 
@@ -265,7 +275,9 @@ export default function PriceSection() {
             <h3 className={styles.categoryTitle}>Специализированные услуги</h3>
           </div>
           <div className={styles.grid3}>
-            {specializedServices.map((item, index) => renderPriceCard(item, index))}
+            {specializedServices.map((item, index) =>
+              renderPriceCard(item, index),
+            )}
           </div>
         </div>
 
@@ -276,7 +288,9 @@ export default function PriceSection() {
             <h3 className={styles.categoryTitle}>Дополнительные услуги</h3>
           </div>
           <div className={styles.grid3}>
-            {additionalServices.map((item, index) => renderPriceCard(item, index))}
+            {additionalServices.map((item, index) =>
+              renderPriceCard(item, index),
+            )}
           </div>
         </div>
 
@@ -303,7 +317,9 @@ export default function PriceSection() {
             <span className={styles.ctaEmoji}>💪</span>
             <div>
               <h4 className={styles.ctaTitle}>Готовы начать?</h4>
-              <p className={styles.ctaText}>Запишитесь на бесплатную консультацию уже сегодня</p>
+              <p className={styles.ctaText}>
+                Запишитесь на бесплатную консультацию уже сегодня
+              </p>
             </div>
             <Link href="/trenera" className={styles.ctaBtn}>
               Связаться с тренером →
