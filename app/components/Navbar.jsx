@@ -1,8 +1,8 @@
-'use client';
-import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import styles from './Navbar.module.css';
+"use client";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -13,13 +13,13 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-    
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Закрытие меню при клике вне навигации
@@ -31,45 +31,44 @@ export default function Navbar() {
     };
 
     if (menuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('touchstart', handleClickOutside);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+      document.body.style.overflow = "unset";
     };
   }, [menuOpen]);
 
-  const toggleMenu = () => setMenuOpen(prev => !prev);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
   const linkItems = [
-    { href: '/', label: 'Главная' },
-    { href: '/trenera', label: 'Тренеры' },
-    { href: '/uslugi', label: 'Услуги' },
-    { href: '/ceny', label: 'Цены' },
-    { href: 'https://www.zdorowdwig.ru/', label: 'Партнеры' },
-    { href: '/contacts', label: 'Контакты' },
+    { href: "/", label: "Главная" },
+    { href: "/trenera", label: "Тренеры" },
+    { href: "/uslugi", label: "Услуги" },
+    { href: "/ceny", label: "Цены" },
+    { href: "https://www.zdorowdwig.ru/", label: "Партнеры" },
+    { href: "/contacts", label: "Контакты" },
   ];
 
   if (!mounted) {
     return (
-      <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`} ref={navRef}>
+      <nav
+        className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}
+        ref={navRef}
+      >
         <div className={styles.logo}>
-          <span className={styles.logoText}>Фитнес<span className={styles.logoAccent}>1</span></span>
+          <span className={styles.logoText}>Фитнес</span>
         </div>
         <div className={styles.links}>
           {linkItems.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={styles.link}
-            >
+            <Link key={href} href={href} className={styles.link}>
               {label}
             </Link>
           ))}
@@ -79,16 +78,21 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`} ref={navRef}>
+    <nav
+      className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}
+      ref={navRef}
+    >
       <div className={styles.logo}>
         <Link href="/" className={styles.logoLink}>
-          <span className={styles.logoText}>Ф<span className={styles.logoAccent}>итнес</span></span>
+          <span className={styles.logoText}>
+            Ф<span className={styles.logoAccent}>итнес</span>
+          </span>
           <span className={styles.logoDot}></span>
         </Link>
       </div>
 
       <button
-        className={`${styles.burger} ${menuOpen ? styles.open : ''}`}
+        className={`${styles.burger} ${menuOpen ? styles.open : ""}`}
         onClick={toggleMenu}
         aria-label="Меню"
       >
@@ -97,10 +101,9 @@ export default function Navbar() {
         <span></span>
       </button>
 
-      <div className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
+      <div className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
         <div className={styles.menuHeader}>
           <span className={styles.menuLogo}>Фитнес</span>
-        
         </div>
         {linkItems.map(({ href, label }) => {
           const isActive = pathname === href;
@@ -108,7 +111,7 @@ export default function Navbar() {
             <Link
               key={href}
               href={href}
-              className={`${styles.link} ${isActive ? styles.active : ''}`}
+              className={`${styles.link} ${isActive ? styles.active : ""}`}
               onClick={closeMenu}
             >
               <span className={styles.linkIndicator}></span>
